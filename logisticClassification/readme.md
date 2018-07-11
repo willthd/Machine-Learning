@@ -12,7 +12,7 @@ credit card fraudulent transaction detection : legitimate or fraud
 
 ### description
 
-linear regression만으론 정의역의 값이 너무 크거나 작은 경우 그 결과 값이 크게 벗어날 수 있다
+linear regression만으론 정의역의 값이 너무 크거나 작은 경우 그 결과 값이 크게 벗어날 수 있다(결과는 오직 0과 1뿐이기 때문)
 
 따라서 아래의 g(z)함수를 이용하며 이는 어떤 정의역에 대해서도 0 ~1사이의 결과 값을 갖는다
 
