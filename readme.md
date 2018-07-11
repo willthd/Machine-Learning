@@ -4,7 +4,7 @@
 
 
 
-* [logistic classification](./logisticClassification)
+* [classification](./classification)
 
 
 
