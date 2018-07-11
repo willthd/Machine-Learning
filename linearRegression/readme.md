@@ -19,7 +19,9 @@ unsupervised - : learning with un-labeled examples
 
 
 
-현재 구하고자 하는 것은 W와 b다 ! 여기서 y는 실제 값. 
+현재 구하고자 하는 것(train되는 것)은 W와 b다 ! 여기서 y는 실제 값. 
+
+cost(W, b)는 결국 실제 값과 차이가 클 수록 그 값이 커지고, 차이가 작을 수록 그 값이 작아지는 함수
 
 
 
