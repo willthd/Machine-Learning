@@ -85,3 +85,69 @@ logistic classification을 세 가지로 나누어 보는 것
 
 
 ![10im](./10.jpg)
+
+
+
+![11im](./11.jpg)
+
+
+
+각각의 scrore를 결국 A, B, C 각 확률로 나타내야 한다. 여기서 세 가지 확률은 각각 0~1 사이여야 하고, 그 확률의 총 합은 1이다
+
+
+
+![12im](./12.jpg)
+
+
+
+'one-hot' encoding을 통해 가장 확률이 높은 a 당첨
+
+
+
+![13im](./13.jpg)
+
+
+
+cost function 구하기
+
+![14im](./14.jpg)
+
+![12](/Users/PJS/Desktop/12.jpg)
+
+![11](/Users/PJS/Desktop/11.jpg)
+
+![15](/Users/PJS/Desktop/15.jpg)
+
+![14](/Users/PJS/Desktop/14.jpg)
+
+사실 logistic cost function과 cross entropy는 일치 한다고 볼 수 있다. 그 이유는
+
+logistic 에서는 y값이 0 또는 1 이있는데, 이를 one-hot encoding 벡터로 바꿔서 cross entropy를 적용해 보면 
+
+0=>[1, 0], 1=>[0, 1] 이다
+
+logistic 을 풀자면, 
+
+-log(H(x))   : y = 1 => [0, 1] 
+
+-log(1-H(x)) : y = 0 => [1, 0] 
+
+cross entropy 를 풀자면,
+
+sigma(Li * -log(Si))
+
+y = L, H(x) = S 이므로 
+
+L:[0, 1], S:H(x) 
+
+=> sigma([0, 1] ( * ) -log[0, 1]) = 0 
+
+L:[1, 0], S:1-H(x) 
+
+=> sigma([1, 0] ( * ) -log[1-0, 1-1]) = sigma([1,0] ( * ) -log[1,0]) = 0 
+
+이 대입으로 보면 logistic cost & cross entropy 는 같은 의미이다
+
+따라서 전체 cost function은 아래와 같다
+
+![15im](./15.jpg)
