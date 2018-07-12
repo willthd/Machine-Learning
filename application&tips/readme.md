@@ -1,7 +1,5 @@
 # application & tips
 
-> learning rate, data preprocessing, overfitting
-
 
 
 ## learning rate
@@ -14,9 +12,15 @@ learning rate 굉장히 중요하다. 대개 0.01 정도로 시작
 
 
 
-* learning rate이 작을 경우 -> 결과의 변화가 너무 미세하게 나타난다
+* learning rate이 작을 경우 -> 결과의 변화가 너무 미세하게 나타난다. local minimum에 빠질 수 있다
+
+
 
 ![im02](./02.jpg)
+
+
+
+![aim](./a.jpg)
 
 
 
@@ -34,9 +38,29 @@ learning rate 굉장히 중요하다. 대개 0.01 정도로 시작
 
 
 
-normalization의 한 방법으로 standardization이 있다
+**normaliztion기법**
+
+
+
+* standardization
 
 ![im05](./05.jpg)
+
+
+
+* min-max scale
+
+![bim](./b.jpg)
+
+
+
+```python
+from sklearn.preprocessing import MinMaxScaler
+
+xy = MinMaxScaler().fit_transform(xy)
+```
+
+
 
 
 
@@ -75,3 +99,32 @@ l2reg = 0.001 * tf.reduce_sum(tf.square(W))
 
 
 ![im09](./09.jpg)
+
+
+
+
+
+## training & test data set
+
+
+
+data set을 training과 test(대개 30%)로 나눈다. training은 model이 학습하는데 필요한 용도이고, test는 말 그대로 training된 모델을 평가하기 위함
+
+
+
+![10im](./10.jpg)
+
+
+
+training data set중 일부를 validation data set으로 구분하기도 한다. 이는 learning rate이나 regulaization strength를 결정할 때 사용
+
+![11im](./11.jpg)
+
+
+
+online learning이란 기존의 data로 학습된 model에 새로운 data를 추가로 학습시키는 것을 말한다
+
+
+
+![12im](./12.jpg)
+
