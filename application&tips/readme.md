@@ -72,3 +72,6 @@ tensorflow에서 사용법
 l2reg = 0.001 * tf.reduce_sum(tf.square(W))
 ```
 
+
+
+![im09](./09.jpg)
