@@ -94,6 +94,8 @@ logistic classification을 세 가지로 나누어 보는 것
 
 각각의 scrore를 결국 A, B, C 각 확률로 나타내야 한다. 여기서 세 가지 확률은 각각 0~1 사이여야 하고, 그 확률의 총 합은 1이다
 
+이것이 최종 hypothesis !
+
 
 
 ![12im](./12.jpg)
@@ -112,13 +114,9 @@ cost function 구하기
 
 ![14im](./14.jpg)
 
-![12](/Users/PJS/Desktop/12.jpg)
 
-![11](/Users/PJS/Desktop/11.jpg)
 
-![15](/Users/PJS/Desktop/15.jpg)
 
-![14](/Users/PJS/Desktop/14.jpg)
 
 사실 logistic cost function과 cross entropy는 일치 한다고 볼 수 있다. 그 이유는
 
