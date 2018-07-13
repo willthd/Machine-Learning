@@ -1,6 +1,6 @@
 # classification
 
-## Logistic classification
+## Logistic classification(logistic regression)
 
 ### example(binary classifiacation)
 
