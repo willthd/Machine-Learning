@@ -128,3 +128,22 @@ online learning이란 기존의 data로 학습된 model에 새로운 data를 추
 
 ![12im](./12.jpg)
 
+
+
+
+
+## epoch, batch
+
+![cim](./c.jpg)
+
+
+
+epoch : 전체 data set을 한 번 학습 시키는 것
+
+
+
+batch : 한번에 학습하면 메모리 할당 많으니까 나눠서 학습하도록 한다. 이 때의 단위가 batch
+
+
+
+ex: 1000개의 데이터가 있을 때 batch 사이즈가 500이면 1epoch을 돌기 위해선 2batch가 필요하다
