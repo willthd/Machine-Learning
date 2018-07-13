@@ -1,4 +1,4 @@
-# XOR & backpropagation
+# XOR & back propagation
 
 ## XOR
 
