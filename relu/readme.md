@@ -1,4 +1,6 @@
-# ReLU & RBM
+
+
+# ReLU, RBM, drop out, ensemble
 
 
 
@@ -57,4 +59,78 @@ hidden layer가 많은 상황에서 sigmoid를  사용하게 되면, 뒤의 미�
 
 
 ![03](./03.jpg)
+
+
+
+
+
+## drop out
+
+overfitting을 막기 위해선 regularization을 하는데, neural network에서는 drop out이라는 방법이 하나 더 있다
+
+이는 기존의 몇 개의 노드를 임의로 없애버리고 training하겠다는 것. training할 때마다 임의로 선정한 몇 개의 노드를 무시한채로 training하고, 마지막 평가할 때는 모든 노드를 포함한다
+
+
+
+
+
+![04](04.jpg)
+
+
+
+![05](05.jpg)
+
+
+
+* 주의
+
+  train : dropout_rate = 0.7(대개 0.5)
+
+  evaluate : dropout_rate = 1 !!!
+
+  tensorflow 1.0 이후 부터 dropout_reate 대신 keep_prob으로 설정해준다. 얼만큼 노드를 살릴것인지
+
+  ![12](12.jpg)
+
+![06](06.jpg)
+
+
+
+## ensemble
+
+> 몇 개의 모델을 통해 학습 시킨 후 그것을 combine하는 방법. 평가율이 2% ~ 5%까지 올라간다
+
+
+
+![07](07.jpg)
+
+
+
+
+
+## network는 다양하게 만들 수 있다. 내 마음대로
+
+
+
+![08](./08.jpg)
+
+
+
+![09](./09.jpg)
+
+
+
+![10](./10.jpg)
+
+
+
+![11](./11.jpg)
+
+
+
+## 꿀팁 summary
+
+
+
+![13](./13.jpg)
 
