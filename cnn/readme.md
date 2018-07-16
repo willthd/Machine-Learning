@@ -25,9 +25,11 @@
 
 
 
+#### padding을 넣는 효과
 
+output image가 기존의 7x7 그대로 유지된다(stride가 1일 때). 정보를 그대로 유지할 수 있음
 
-padding을 넣는다 -> output image가 기존의 7x7 그대로 유지된다(stride가 1일 때)
+모서리 부분을 network가 확인할 수 있게함
 
 
 
@@ -43,9 +45,64 @@ padding을 넣는다 -> output image가 기존의 7x7 그대로 유지된다(str
 
 
 
-첫번째에서 weight의 개수는 6 x 5 x 5 x 3 = 450
+첫번째에서 convolutional layer에서 weight의 개수는 6 x 5 x 5 x 3 = 450
 
-두번째에서 weight의 개수는 10 x 5 x 5 x 6 = 1500
+두번째에서 convolutional layer에서 weight의 개수는 10 x 5 x 5 x 6 = 1500
 
 
 
+
+
+## pooling
+
+>  추출된 Activation map을 인위로 줄이는 작업, sub sampling
+
+.
+
+풀링 레이어가 하는 일은 네트워크의 파라미터의 개수나 연산량을 줄이기 위해 representation의 spatial한 사이즈를 줄이는 것이다. 이는 오버피팅을 조절하는 효과도 가지고 있다
+
+
+
+
+
+![05](./05.jpg)
+
+
+
+
+
+max pooling이 자주 쓰인다
+
+
+
+![04](./04.jpg)
+
+
+
+
+
+![06](./06.jpg)
+
+
+
+conv, relu, pool의 순서 및 횟수는 특별히 정해진 것 없다
+
+
+
+![07](./07.jpg)
+
+
+
+1단계 : convolution
+
+2단계 : feature extraction(sub sampling, convolution...)
+
+3단계 : (fully connected layer를 통한) classification
+
+
+
+## study case
+
+imageNet 대회, ResNet, 3%대, fast foward 사용
+
+google(deep mind), alpago
