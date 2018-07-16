@@ -66,7 +66,7 @@ xy = MinMaxScaler().fit_transform(xy)
 
 ## overfitting
 
-수집된 데이터에 정확한 결과를 위해 modeling을 과하게 한것. 아래 graph에서 model2는 일반화되어 있지 않고, 특정 data에 한해 적용할 수 있기 때문에 한계가 있다. machine learning에서 가장 큰 문제가 되고 있다
+수집된 데이터에 정확한 결과를 위해 modeling을 과하게 한것. 아래 graph에서 model2는 일반화되어 있지 않고, 특정 data에 한해 적용할 수 있기 때문에 한계가 있다. machine learning에서 가장 큰 문제가 되고 있다. layer가 많을수록 weight가 많아지면서 overfitting되는 경우가 많다
 
 ![im06](./06.jpg)
 
@@ -95,6 +95,8 @@ tensorflow에서 사용법
 ```python
 l2reg = 0.001 * tf.reduce_sum(tf.square(W))
 ```
+
+
 
 
 
