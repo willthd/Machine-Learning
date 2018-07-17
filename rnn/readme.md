@@ -119,3 +119,22 @@ RNN도 multi layer를 적용해 accuracy를 높일 수 있다
 
 
 RNN보다는 LSTM, GRU이 많이 쓰인다
+
+
+
+### tensorflow에서
+
+![12](./12.jpg)
+
+
+
+shape을 보면, (batch_size, sequence_length, hidden_size)
+
+batch_size는 한 batch에 몇 개의 data를 줄 것인지
+
+sequence_length는 입력이 몇 개인지(여기선 문자열의 길이)
+
+hidden_size는 임의로 설정해주는 값
+
+
+

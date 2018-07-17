@@ -61,7 +61,9 @@ output image가 기존의 7x7 그대로 유지된다(stride가 1일 때). 정보
 
 .
 
-풀링 레이어가 하는 일은 네트워크의 파라미터의 개수나 연산량을 줄이기 위해 representation의 spatial한 사이즈를 줄이는 것이다. 이는 오버피팅을 조절하는 효과도 가지고 있다
+풀링 레이어가 하는 일은 네트워크의 파라미터의 개수나 연산량을 줄이기 위해 representation의 spatial한 사이즈를 줄이는 것이다. 이는 작은 데이터셋에 한해서 오버피팅을 방지하는 효과도 가지고 있다
+
+Striving for Simplicity : The All Convolutional Net 이라는 논문에서는 pooling을 하지 않고 convolutional layer만 이용하는 방법이 제안되고 있으며, 최근 추세는 pooling을 사용하지 않는 쪽으로 발전하고 있다고 언급되어 있다
 
 
 
