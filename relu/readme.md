@@ -98,7 +98,7 @@ overfitting을 막기 위해선 regularization을 하는데, neural network에�
 
 ## ensemble
 
-> 몇 개의 모델을 통해 학습 시킨 후 그것을 combine하는 방법. 평가율이 2% ~ 5%까지 올라간다
+> 몇 개의 모델을 통해 학습 시킨 후 나온 예측값을 조합해 예측하는 방법. 평가율이 2% ~ 5%까지 올라간다
 
 
 
