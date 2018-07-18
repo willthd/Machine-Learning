@@ -138,3 +138,78 @@ hidden_size는 임의로 설정해주는 값
 
 
 
+### sequence가 길다면?
+
+
+
+sequence가 긴 경우 accuracy가 낮아지는데, 이 때 rnn의 층을 깊고 넓게 만들어 준다. 그리고 cnn에서와 마찬가지로 마지막 layer를 fully connected layer로 softmax 한다
+
+
+
+![13](./13.jpg)
+
+
+
+중요한 점은, logits 값에 output을 넣어 줄 때, activation function을 거치지 않은 값을 넣어주는 것이 바람직하다. 이전의 코드에선 rnn의 output을 logits값으로 넣었는데 이는 activation function을 거친 이후이기 때문에 결과가 제대로 나오지 못했다. 따라서 fc layer(softMax)의 output(actiation function을 거치지 않은 상태)을 logits으로 넣어준다
+
+
+
+![14](./14.jpg)
+
+
+
+
+
+### sequence 길이가 다 제각각 이라면?
+
+
+
+dynamic rnn 활용한다. 이 때 sequence_length만 임의의로 지정해준다면, 지정해준 값을 제외한 나머지는 0으로 출력되어 나온다
+
+
+
+![15](./15.jpg)
+
+
+
+
+
+
+
+### 시간에 따라 변하는 data라면?
+
+
+
+time series data : 시간에 따라 값이 변하는 data
+
+
+
+![16](./16.jpg)
+
+
+
+
+
+#### ex) 주식 가격
+
+
+
+![17](./17.jpg)
+
+
+
+input data는 다섯 가지(open, high, low, volume, close)
+
+data의 sequence는 7(day1 ~ day7, day8을 예측)
+
+output은 1(day8의 close가격)
+
+
+
+
+
+#### RNN 적용
+
+
+
+![18](./18.jpg)
