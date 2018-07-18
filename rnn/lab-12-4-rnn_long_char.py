@@ -63,6 +63,7 @@ outputs = tf.reshape(outputs, [batch_size, sequence_length, num_classes])
 # 여기서 주의할 점은 logits의 outputs이 activation function을 거치지 않은 값이라는 점. 이게 더 정확하다
 # 이전 까지는 rnn의 output이었기 때문에 activation function을 거친 상태였지만, 여기선 softMax의 output이므로
 # activation function을 거치지 않은 상태이다
+# 그런데 code에는 softmax가 없다...?
 weights = tf.ones([batch_size, sequence_length])
 
 sequence_loss = tf.contrib.seq2seq.sequence_loss(
