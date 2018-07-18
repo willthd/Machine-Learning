@@ -16,3 +16,27 @@
 
 
 
+* [XOR & back propagation](./XOR&backpropagation)
+
+
+
+* [relu](./relu)
+
+
+
+* [convolutional neural network](./cnn)
+
+
+
+* [recurrent neural network](./recurrent neural network)
+
+
+
+
+
+
+
+
+
+
+
