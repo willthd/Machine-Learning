@@ -130,9 +130,9 @@ RNN보다는 LSTM, GRU이 많이 쓰인다
 
 shape을 보면, (batch_size, sequence_length, hidden_size)
 
-batch_size는 한 batch에 몇 개의 data를 줄 것인지
+batch_size는 한 batch에 몇 개의 data를 줄 것인지(몇개의 문자열을 줄것인지)
 
-sequence_length는 입력이 몇 개인지(여기선 문자열의 길이)
+sequence_length는 입력이 몇 개인지(문자열의 길이)
 
 hidden_size는 임의로 설정해주는 값
 
