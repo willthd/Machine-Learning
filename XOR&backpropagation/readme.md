@@ -1,8 +1,20 @@
 # XOR & back propagation
 
+## perceptron
+
+다수의 신호를 입력으로 받아 하나의 신호를 출력
+
+단층 perceptron은 그래프에서 선형 함수라고 생각하면 이해하기 쉽다
+
+ex) AND, NAND, OR, XOR gate...
+
+
+
 ## XOR
 
 > XOR 도 hypothesis로 만들 수 있을까?
+>
+> 단층 perceptron으론 XOR gate만들 수 없다!
 
 
 
