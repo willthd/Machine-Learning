@@ -28,7 +28,11 @@
 
 
 
-* [recurrent neural network](./recurrent neural network)
+* [recurrent neural network](./rnn)
+
+
+
+
 
 
 
