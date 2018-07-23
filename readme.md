@@ -20,7 +20,11 @@
 
 
 
-* [relu](./relu)
+* [relu, rbm, drop out](./relu)
+
+
+
+* [neural network](./nn)
 
 
 
