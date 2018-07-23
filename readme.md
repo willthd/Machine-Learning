@@ -12,7 +12,7 @@
 
 
 
-* [application & tips](./application%tips)
+* [application & tips](./application&tips)
 
 
 
