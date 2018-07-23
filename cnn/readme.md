@@ -1,4 +1,4 @@
-# convolutional network
+# convolutional neural network
 
 > 고양이 실험. 고양이가 한 이미지를 바라볼 때, 전체 이미지 중 특정 부분에만 반응하는 neuron존재. 따라서 일정 크기의 필터(커널)를 이용해 각 부분을 뽑아보자라는 아이디어에서 출발
 
