@@ -46,7 +46,7 @@ neural network에서는 actication function으로 비선형 함수를 사용한�
 
 
 
-* 항등 함수
+* 항등 함수(출력층, 주로 regression에서)
 
   입력을 그대로 출력
 
@@ -54,9 +54,25 @@ neural network에서는 actication function으로 비선형 함수를 사용한�
 
 
 
-* softMax
+* softMax(출력층, 주로 classification)
+
+  
+
+  ![01](./01.png)
+
+  
 
   다중 클래스 분류에 쓰임
+
+  출력층의 각 뉴런이 모든 입력 신호에서 영향을 받는다
+
+  overflow(컴퓨터가 표현할 수 있는 값을 넘는 현상)를 막기 위해 exp 지수값에서 -C(입력값의 최대치) 해준다
+
+  출력의 총 합은 1이다 (중요) -> 함수의 출력을 '확률'로 계산 가능
+
+  기계학습의 문제 풀이는 **학습**과 **추론**(순전파, forward propagation)의 두 단계를 거친다. neural network도 마찬가지인데, 추론 단계에서 분류 할 때, softmax function은 없어도 된다. softmax function 단조 함수라 적용해도 입력 원소의 대소 관계는 변하지 않기 때문이다. 따라서 현업에서도 계산에 드는 자원 낭비를 줄이고자 추론 단계에서 출력층의 softmax function은 생략하는 것이 일반적이다
+
+
 
 ### 행렬의 곱
 
