@@ -4,6 +4,22 @@
 
 
 
+### machine learning VS deep learning
+
+
+
+![01](./01.png)
+
+
+
+딥러닝은 사람이 직접 feature를 설계할 필요 없다
+
+
+
+### contents
+
+
+
 * [linear regression](./linearRegression)
 
 
