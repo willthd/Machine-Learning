@@ -62,6 +62,8 @@ y(실제값)이 1일 때, H(X)는 1에 가까워 질 수록 cost function(둘의
 
 ![im06](./06.jpg)
 
+
+
 따라서 cost function을 정리하면 위와 같다. y의 값에 따라 나누는 것이 불편하기 때문에 가장 아래처럼 한번에 적용
 
 
@@ -110,7 +112,11 @@ logistic classification을 세 가지로 나누어 보는 것
 
 
 
-cost function 구하기
+**cross entropy error(CEE, 교차 엔트로피 오차)**
+
+
+
+
 
 ![14im](./14.jpg)
 
