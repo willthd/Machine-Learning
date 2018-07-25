@@ -1,5 +1,9 @@
 # classification
 
+> classification을 logisitic(binary)과 mutinomial 두 가지로 구분하여 분석했다. 
+
+
+
 ## Logistic classification(logistic regression)
 
 ### example(binary classifiacation)
@@ -14,9 +18,11 @@ credit card fraudulent transaction detection : legitimate or fraud
 
 ### description
 
+classification에서는 출력값이 0과 1 사이로 나와야 한다
+
 linear regression만으론 정의역의 값이 너무 크거나 작은 경우 그 결과 값이 크게 벗어날 수 있다(결과는 오직 0과 1뿐이기 때문)
 
-따라서 아래의 g(z)함수를 이용하며 이는 어떤 정의역에 대해서도 0 ~1사이의 결과 값을 갖는다
+따라서 아래의 sigmoid 함수를 이용하며, 이는 어떤 정의역에 대해서도 0 ~1사이의 결과 값을 갖는다
 
 
 
@@ -24,7 +30,7 @@ linear regression만으론 정의역의 값이 너무 크거나 작은 경우 �
 
 
 
-따라서 logistic 가설을 세운다면 아래와 같다
+sigmoid 함수를 식으로 나타내면 아래와 같다
 
 
 
@@ -40,7 +46,7 @@ linear regression만으론 정의역의 값이 너무 크거나 작은 경우 �
 
 
 
-따라서 이를 해결하기 위해 cosf function을 기존의 linear regression에서와는 다르게 만들어야 한다
+따라서 이를 해결하기 위해 cosf function을 기존의 linear regression(mean squared error, 평균 제곱 오차)에서와는 다르게 만들어야 한다
 
 
 
@@ -68,7 +74,13 @@ y(실제값)이 1일 때, H(X)는 1에 가까워 질 수록 cost function(둘의
 
 
 
-## Sofrmax Regression(Multinomial Logistic Regression)
+### 정리
+
+binary classification(logistic classification)은 0~1사이의 출력값을 얻기 위해 활성화 함수를 sigmoid로 사용하는데, 이 때 cost function은 기존의 mean squared error로는 구할 수 없다. 따라서 위와 같이 구한다
+
+
+
+## Softmax Regression(Multinomial Logistic Regression)
 
 
 
@@ -88,31 +100,37 @@ logistic classification을 세 가지로 나누어 보는 것
 
 ![10im](./10.jpg)
 
+#### hypothesis
+
+활성화 함수로 softmax function 사용한다
+
 
 
 ![11im](./11.jpg)
 
 
 
-각각의 scrore를 결국 A, B, C 각 확률로 나타내야 한다. 여기서 세 가지 확률은 각각 0~1 사이여야 하고, 그 확률의 총 합은 1이다
-
-이것이 최종 hypothesis !
+각각의 scrore를 결국 A, B, C 각 확률로 나타내야 한다. 여기서 세 가지 확률은 각각 0~1 사이여야 하고, 그 확률의 총 합은 1이다. softmax function에 대한 자세한 내용은 neural network에서 상세하게 표기해두었다
 
 
+
+#### one hot encoding
 
 ![12im](./12.jpg)
 
 
 
-'one-hot' encoding을 통해 가장 확률이 높은 a 당첨
+**'one-hot' encoding**을 통해 가장 확률이 높은 a 당첨
+
+
+
+### cost function
+
+cost function으로 **cross entropy error(CEE, 교차 엔트로피 오차)** 사용한다
 
 
 
 ![13im](./13.jpg)
-
-
-
-**cross entropy error(CEE, 교차 엔트로피 오차)**
 
 
 

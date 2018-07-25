@@ -81,3 +81,10 @@ matrix를 사용한다. 대개 수학적으로 표기할 때엔 H(x) = WX라고 
 
 ![im09](./09.jpg)
 
+
+
+
+
+### linear regression 정리
+
+![10](./10.jpg)
