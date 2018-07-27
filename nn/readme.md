@@ -76,6 +76,8 @@ neural network에서는 actication function으로 비선형 함수를 사용한�
 
 ### 행렬의 곱
 
+주의 !
+
 ```python
 A = np.array([[1,2],[3,4],[5,6]])
 A.shape		# (3,2)
