@@ -18,11 +18,17 @@
 
 
 
+
+
 ### contents
 
 
 
 * [perceptron](./perceptron)
+
+
+
+* [neural network](./nn)
 
 
 
@@ -43,10 +49,6 @@
 
 
 * [relu, rbm, drop out](./relu)
-
-
-
-* [neural network](./nn)
 
 
 
