@@ -22,6 +22,10 @@
 
 
 
+* [perceptron](./perceptron)
+
+
+
 * [linear regression](./linearRegression)
 
 
@@ -31,10 +35,6 @@
 
 
 * [application & tips](./application&tips)
-
-
-
-* [perceptron](./perceptron)
 
 
 
