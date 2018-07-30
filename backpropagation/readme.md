@@ -125,6 +125,42 @@
 
 
 
+### affine
+
+행렬의 곱
+
+
+
+* 수식
+
+  ![affine1](./affine1.jpg)
+
+  
+
+* 로컬 그래디언트
+
+![affine2](./affine2.jpg)
+
+
+
+![affine3](./affine3.jpg)
+
+
+
+* 계산그래프
+
+  ![affine4](./affine4.jpg)
+
+
+
+* 배치용 affine(X가 N개 묶여 있을 경우)
+
+
+
+![affine5](./affine5.jpg)
+
+
+
 
 
 ### softmax - with - loss node
