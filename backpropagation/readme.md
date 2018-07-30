@@ -1,56 +1,4 @@
-# XOR & back propagation
-
-## perceptron
-
-다수의 신호를 입력으로 받아 하나의 신호를 출력
-
-단층 perceptron은 그래프에서 선형 함수라고 생각하면 이해하기 쉽다
-
-ex) AND, NAND, OR, XOR gate...
-
-
-
-## XOR
-
-> XOR 도 hypothesis로 만들 수 있을까?
->
-> 단층 perceptron으론 XOR gate만들 수 없다!
-
-
-
-* truth table
-
-
-
-![00](./00.jpg)
-
-
-
-하나만으론 안된다. 그래서 세개로 표현했더니 가능 !
-
-실제로 4개의 데이터로 layer1만으로 10000번 돌리면 accuracy : 50% 였던게 layer2를 합쳤을 때 accyracy : 100% 나온다
-
-
-
-![01](./01.jpg)
-
-
-
-
-
-그것이 바로 neural network. layer1의 두 개를 합쳐서 하나로 표현해도 무방
-
-
-
-![02](./02.jpg)
-
-
-
-![03](./03.jpg)
-
-
-
-## back propagation
+# back propagation
 
 > 예측값과 실제값의 차이(cost, error)를 통해 뒤에서 부터 앞으로 추적하여 조정해야 되는 값(weight, bias)의 기울기를 계산하겠다
 
@@ -105,7 +53,7 @@ ex) AND, NAND, OR, XOR gate...
 
 
 
-![add](/Users/PJS/Desktop/github/ml/XOR&backpropagation/addNode.png)
+![add](./addNode.png)
 
 
 
@@ -131,7 +79,7 @@ ex) AND, NAND, OR, XOR gate...
 
 
 
-![mul](/Users/PJS/Desktop/github/ml/XOR&backpropagation/mulNode.png)
+![mul](./mulNode.png)
 
 
 
@@ -151,7 +99,7 @@ ex) AND, NAND, OR, XOR gate...
 
 - 계산그래프
 
-![simoid](/Users/PJS/Desktop/github/ml/XOR&backpropagation/sigmoid.png)
+![simoid](./sigmoid.png)
 
 
 
@@ -197,15 +145,18 @@ ex) AND, NAND, OR, XOR gate...
 
 
 
+Softmax-with-Loss 노드는 a를 입력으로 받아서 Loss L을 출력한다. 역전파하는 그래디언트는 yk − tk가 된다. 예컨대 정답이 t3이라면 역전파되는 그래디언트는 각각 y1 ,y2, y3−1이 된다.
+
+요컨대 Softmax-with-Loss 노드의 역전파 그래디언트를 구하려면 입력값에 소프트맥스 확률값을 취한 뒤, 정답 레이블에 해당하는 요소만 1을 빼주면 된다는 의미
 
 
 
-
-![a](./a.jpg)
-
-
-
-code작성 할 때 이런식으로 dimension 맞춰 준다. 처음 W1의 2는 X의 개수이고, 오른쪽은 임의의 값이다. W4의 오른쪽 값은 Y의 dimension이 될 것이고 b4도 이와 같이 맞춰준다
+```python
+import numpy as np
+p = np.exp(a) / np.sum(np.exp(a)) # softmax 확률 계산
+da = np.copy(p)
+da[target] -= 1 # target=정답 인덱스를 갖고 있는 변수
+```
 
 
 
