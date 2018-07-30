@@ -46,7 +46,19 @@ ex) AND, NAND, OR, XOR gate...
 
 
 
+
+
 ![03](./03.jpg)
+
+
+
+
+
+
+
+![a](./a.jpg)
+
+
 
 
 
