@@ -34,7 +34,11 @@
 
 
 
-* [XOR & back propagation](./XOR&backpropagation)
+* [perceptron](./perceptron)
+
+
+
+* [back propagation](./backpropagation)
 
 
 
