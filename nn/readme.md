@@ -70,7 +70,7 @@ neural network에서는 actication function으로 비선형 함수를 사용한�
 
   출력의 총 합은 1이다 (중요) -> 함수의 출력을 '확률'로 계산 가능
 
-  기계학습의 문제 풀이는 **학습**과 **추론**(순전파, forward propagation)의 두 단계를 거친다. neural network도 마찬가지인데, 추론 단계에서 분류 할 때, softmax function은 없어도 된다. softmax function 단조 함수라 적용해도 입력 원소의 대소 관계는 변하지 않기 때문이다. 따라서 현업에서도 계산에 드는 자원 낭비를 줄이고자 추론 단계에서 출력층의 softmax function은 생략하는 것이 일반적이다
+  기계학습의 문제 풀이는 **학습**과 **추론(예측하는 것, 회귀 or 분류)**의 두 단계를 거친다. neural network도 마찬가지인데, 추론 단계에서 분류 할 때, softmax function은 없어도 된다. softmax function 단조 함수라 적용해도 입력 원소의 대소 관계는 변하지 않기 때문이다. 따라서 현업에서도 계산에 드는 자원 낭비를 줄이고자 추론 단계에서 출력층의 softmax function은 생략하는 것이 일반적이다(학습 단계에서는 softmax 사용)
 
 
 

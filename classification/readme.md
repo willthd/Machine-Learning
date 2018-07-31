@@ -76,7 +76,7 @@ y(실제값)이 1일 때, H(X)는 1에 가까워 질 수록 cost function(둘의
 
 ### 정리
 
-binary classification(logistic classification)은 0~1사이의 출력값을 얻기 위해 활성화 함수를 sigmoid로 사용하는데, 이 때 cost function은 기존의 mean squared error로는 구할 수 없다. 따라서 위와 같이 구한다
+binary classification(logistic classification)은 0~1사이의 출력값을 얻기 위해 활성화 함수를 sigmoid로 사용하는데, 그 이유는 cost function을 기존의 mean squared error로는 구할 수 없다(기울기가 0인 곳이 cost function에서 너무 많이 존재). 따라서 위와 같이 구한다
 
 
 
@@ -110,7 +110,7 @@ logistic classification을 세 가지로 나누어 보는 것
 
 
 
-각각의 scrore를 결국 A, B, C 각 확률로 나타내야 한다. 여기서 세 가지 확률은 각각 0~1 사이여야 하고, 그 확률의 총 합은 1이다. softmax function에 대한 자세한 내용은 neural network에서 상세하게 표기해두었다
+각각의 scrore를 결국 A, B, C 각 확률로 나타내야 한다. 여기서 세 가지 확률은 각각 0~1 사이여야 하고, 그 확률의 총 합은 1이다. 따라서 softmax function을 활성화 함수로 사용하며 이에 대한 자세한 내용은 neural network에서 상세하게 표기해두었다
 
 
 
