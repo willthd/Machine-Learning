@@ -24,6 +24,8 @@
 
 
 
+
+
 * [perceptron](./perceptron)
 
 
@@ -40,15 +42,11 @@
 
 
 
-* [application & tips](./application&tips)
-
-
-
 * [back propagation](./backpropagation)
 
 
 
-* [relu, rbm, drop out](./relu)
+* [application & tips](./application&tips)
 
 
 

@@ -16,11 +16,11 @@ input layer - hidden layer - ouput layer
 
 ### 비선형 함수
 
-neural network에서는 actication function으로 비선형 함수를 사용한다. 이유는 선형 함수(y=ax + b)를 사용할 경우 그것은 hidden layer가 없는 구조로도 충분히 만들 수 있기 때문이다. 그럼 층을 쌓는 neural network를 사용할 이유가 없음
+neural network에서는 activation function으로 비선형 함수를 사용한다. 이유는 선형 함수(y=ax + b)를 사용할 경우 그것은 hidden layer가 없는 구조로도 충분히 만들 수 있기 때문이다. 그럼 층을 쌓는 neural network를 사용할 이유가 없음
 
 
 
-### actication function
+### activation function
 
 * Sigmoid
 
@@ -45,6 +45,9 @@ neural network에서는 actication function으로 비선형 함수를 사용한�
   ```
 
 
+
+
+​	sigmoid의 문제점
 
 * 항등 함수(출력층, 주로 regression에서)
 

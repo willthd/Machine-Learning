@@ -125,7 +125,23 @@
 
 
 
-### ReLU Node
+### 하이퍼볼릭탄젠트 node
+
+* 수식
+
+  ![hyper1](./hyper1.jpg)
+
+* 로컬 그래디언트
+
+![hyper2](./hyper2.jpg)
+
+* 계산그래프
+
+![hyper3](./hyper3.jpg)
+
+
+
+### ReLU node
 
 * **활성화함수(activation function)**로 사용되는 **ReLU**는 수식
 
