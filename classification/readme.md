@@ -4,6 +4,8 @@
 
 
 
+
+
 ## Logistic classification(logistic regression)
 
 ### example(binary classifiacation)
@@ -142,9 +144,9 @@ cost function으로 **cross entropy error(CEE, 교차 엔트로피 오차)** 사
 
 
 
-사실 logistic cost function과 cross entropy는 일치 한다고 볼 수 있다. 그 이유는
+사실 logistic cost function과 cross entropy는 일치 한다고 볼 수 있다.
 
-logistic 에서는 y값이 0 또는 1 이있는데, 이를 one-hot encoding 벡터로 바꿔서 cross entropy를 적용해 보면 
+그 이유는 logistic 에서는 y값이 0 또는 1 이있는데, 이를 one-hot encoding 벡터로 바꿔서 cross entropy를 적용해 보면 
 
 0=>[1, 0], 1=>[0, 1] 이다
 
