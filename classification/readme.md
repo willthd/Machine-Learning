@@ -1,6 +1,6 @@
 # classification
 
-> classification을 logisitic(binary)과 mutinomial 두 가지로 구분하여 분석했다. 
+> classification을 logisitic(binary)과 mutinomial 두 가지로 구분하여 분석했다
 
 
 
