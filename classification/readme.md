@@ -156,7 +156,7 @@ logistic 을 풀자면,
 
 -log(1-H(x)) : y = 0 => [1, 0] 
 
-cross entropy 를 풀자면,
+cross entropy 를 풀자면
 
 sigma(Li * -log(Si))
 
