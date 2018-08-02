@@ -301,3 +301,9 @@ convolutional layer를 여러 겹 쌓으면, 층이 깊어지면서 더 복잡�
 imageNet 대회 - AlexNet, VGG, GoogLeNet, ResNet(3%대, fast foward 사용)
 
 google(deep mind) - alpago
+
+
+
+GoogLeNet 특징 - 1 x 1 filter, Going Deeper With Convolution 논문 참조
+
+ResNet 특징 - Skip Connection, Deep Residual Learning for Image Recognition 논문
