@@ -2,12 +2,13 @@
 
 ### Supervised / Unsupervised learning
 
-supervised - : learning with labeled examples - training set
+* supervised learning(지도 학습) : learning with labeled examples - training set
+  - regression
+  - classification(binary or multi-label)
 
-* regression
-* classification(binary or multi-label)
 
-unsupervised - : learning with un-labeled examples
+
+* unsupervised learning(자율 학습) : learning with un-labeled examples
 
 
 
