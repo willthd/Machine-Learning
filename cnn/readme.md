@@ -98,13 +98,15 @@ filter의 매개변수가 fc에서의 weight(가중치)에 해당한다.
 
 
 
-#### 입력 크기 (H,W),필터크기(FH,FW),패딩(P), 스트라이드(S)에 따른 출력크기(OH,OW)계산
+#### 입력 크기(H,W), 필터크기(FH,FW), 패딩(P), 스트라이드(S)에 따른 출력크기(OH,OW) 계산
 
 
 
 ![e](./e.png)
 
 
+
+안보이는 부분 '-'
 
 OH, OW는 정수로 나와야 한다. (반올림 하는 경우도 있음)
 
@@ -296,8 +298,6 @@ convolutional layer를 여러 겹 쌓으면, 층이 깊어지면서 더 복잡�
 
 ## study case
 
-LeNet, AlexNet
+imageNet 대회 - AlexNet, VGG, GoogLeNet, ResNet(3%대, fast foward 사용)
 
-imageNet 대회, ResNet, 3%대, fast foward 사용
-
-google(deep mind), alpago
+google(deep mind) - alpago
