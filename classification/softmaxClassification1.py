@@ -30,7 +30,8 @@ cost = tf.reduce_mean(-tf.reduce_sum(Y * tf.log(hypothesis), axis=1))
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.01)
 train = optimizer.minimize(cost)
 
-# arg_max는 만약 결과 값이 [0.85, 0.12, 0.03] 나왔다면 이를 [1, 0, 0]으로 one-hot encoding시켜주는 함수
+# arg_max는 만약 결과 값이 [0.85, 0.12, 0.03] 나왔다면 이를 0(가장 큰 index)으로 반환하는 함수
+# 만약 hypothesis의 rank가 1이었다면 tf.arg_max(hypothesis, 0)으로 해야한다
 predict = tf.arg_max(hypothesis, 1)
 real = tf.arg_max(Y, 1)
 accuracy = tf.reduce_mean(tf.cast(tf.equal(predict, real), dtype=tf.float32))
