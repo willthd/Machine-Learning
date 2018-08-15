@@ -175,3 +175,19 @@ L:[1, 0], S:1-H(x)
 따라서 전체 cost function은 아래와 같다
 
 ![15im](./15.jpg)
+
+
+
+
+
+### one-hot-encoding
+
+![aaa](./aaa.jpg)
+
+
+
+우리가 바꾸고 싶은 shape은 (?, 1)에서 (?, 7)이다
+
+tf.one_hot함수를 이용하면 rank가 하나 더 해져 (?, 1, 7)과 같은 형태로 변한다
+
+따라서 tf.reshape()함수를 이용해 적절한 shape으로 변형한다
