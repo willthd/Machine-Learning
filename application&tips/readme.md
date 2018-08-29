@@ -80,7 +80,7 @@ hidden layer가 많은 상황에서 sigmoid를  사용하게 되면, 뒤의 미�
 
 
 
-![00](/Users/PJS/Desktop/github/ml/application&tips/000.jpg)
+![00](./000.jpg)
 
 
 
@@ -88,7 +88,7 @@ hidden layer가 많은 상황에서 sigmoid를  사용하게 되면, 뒤의 미�
 
 0보다 큰 값에 한해서는 그 값의 영향을 남겨두자는 취지로 ReLU function 도입
 
-![01](/Users/PJS/Desktop/github/ml/application&tips/001.jpg)
+![01](./001.jpg)
 
 
 
@@ -110,7 +110,7 @@ Restricted Boatman Machine, weight의 초기값을 잘 주는 방법으로 Deep 
 
 
 
-![02](/Users/PJS/Desktop/github/ml/application&tips/002.jpg)
+![02](./002.jpg)
 
 
 
@@ -140,7 +140,7 @@ Restricted Boatman Machine, weight의 초기값을 잘 주는 방법으로 Deep 
 
 
 
-![03](/Users/PJS/Desktop/github/ml/application&tips/003.jpg)
+![03](./003.jpg)
 
 
 
@@ -150,7 +150,7 @@ Restricted Boatman Machine, weight의 초기값을 잘 주는 방법으로 Deep 
 
 ## epoch, batch
 
-![cim](/Users/PJS/Desktop/github/ml/application&tips/c.jpg)
+![cim](./c.jpg)
 
 
 
@@ -294,11 +294,11 @@ overfitting을 막기 위해선 regularization을 하는데, 신경망 모델이
 
 
 
-![04](/Users/PJS/Desktop/github/ml/application&tips/004.jpg)
+![04](./004.jpg)
 
 
 
-![05](/Users/PJS/Desktop/github/ml/application&tips/005.jpg)
+![05](./005.jpg)
 
 
 
@@ -332,7 +332,7 @@ overfitting을 막기 위해선 regularization을 하는데, 신경망 모델이
 
 
 
-![07](/Users/PJS/Desktop/github/ml/application&tips/007.jpg)
+![07](./007.jpg)
 
 
 
