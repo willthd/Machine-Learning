@@ -189,7 +189,7 @@ mini-batch : 데이터가 너무 많을 경우 훈련 데이터에서 일부만 
 
 
 
-실제 데이터는 한쪽으로 치우쳐 있거나, 산발적으로 흩어져 있는 경우가 많다. 이럴 때 zero-centered 또는 normalized하게 data를 preprocessing해야 한다
+실제 데이터는 한쪽으로 치우쳐 있거나, 산발적으로 흩어져 있는 경우가 많다. 이럴 때 zero-centered 또는 normalized하게 data를 preprocessing해야 한다. 그렇지 않은 경우 결과 값이 NaN이나 inf로 나오는 경우 있다
 
 
 
