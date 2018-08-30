@@ -240,6 +240,8 @@ xy = MinMaxScaler().fit_transform(xy)
 
 ## overfitting
 
+학습 데이터를 기억해버려서 새로운 test data 판단을 잘 하지 못한다
+
 수집된 데이터에 정확한 결과를 위해 modeling을 과하게 한것. 아래 graph에서 model2는 일반화되어 있지 않고, 특정 data에 한해 적용할 수 있기 때문에 한계가 있다. machine learning에서 가장 큰 문제가 되고 있다. overfitting은 layer가 많을수록 weight가 많거나(매개변수가 많고 표현력이 높은 모델) 훈련 데이터가 적은 경우 발생한다
 
 
@@ -285,6 +287,8 @@ l2reg = 0.001 * tf.reduce_sum(tf.square(W))
 
 
 ## drop out
+
+모델이 깊어지는 경우 overfitting일어나기도 한다. 이 때,
 
 overfitting을 막기 위해선 regularization을 하는데, 신경망 모델이 복잡해지면 가중치 감소만으로는 대응하기 어려운 경우가 있다. 이럴 때 흔히 drop out이라는 방법을 사용한다
 
@@ -424,3 +428,28 @@ online learning이란 기존의 data로 학습된 model에 새로운 data를 추
 
 ![13](./013.jpg)
 
+
+
+
+
+## 오버피팅 정리
+
+
+
+* 경우
+
+  training 데이터가 부족할 때
+
+  feature개수가 많을 때
+
+* 해결 방법
+
+  training 데이터 많이
+
+  feature 개수 감소
+
+  normalization
+
+  regularization
+
+  drop out
