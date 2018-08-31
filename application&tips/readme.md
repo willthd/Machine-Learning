@@ -453,3 +453,5 @@ online learning이란 기존의 data로 학습된 model에 새로운 data를 추
   regularization
 
   drop out
+
+  esemble
