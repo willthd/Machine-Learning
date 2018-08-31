@@ -16,6 +16,8 @@
 
 딥러닝은 사람이 직접 feature를 설계할 필요 없다
 
+일반적으로 structured dataset(csv, excel…)은 feature 선택이 수월하다. 이를 이용해 머신러닝 알고리즘에 적용한다
+
 
 
 ![aaa](./aaa.jpg)
