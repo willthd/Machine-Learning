@@ -1,12 +1,10 @@
-# XOR & back propagation
-
 ## perceptron
 
 다수의 신호를 입력으로 받아 하나의 신호를 출력
 
 단층 perceptron은 그래프에서 선형 함수라고 생각하면 이해하기 쉽다
 
-ex) AND, NAND, OR, XOR gate...
+perceptron을 활용해 AND, NAND, OR gate까지는 만들었는데, XOR이 안만들어진다 ? -> 다층 perceptron(neural net의 시작)
 
 
 
