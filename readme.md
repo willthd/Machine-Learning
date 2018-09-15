@@ -30,21 +30,16 @@
 
 
 
-
-
-* [perceptron](./perceptron)
-
-
-
-* [neural network](./nn)
-
-
-
 * [linear regression](./linearRegression)
 
 
 
 * [classification](./classification)
+
+* [application & tips](./application&tips)
+
+
+- [perceptron](./perceptron)
 
 
 
@@ -52,7 +47,7 @@
 
 
 
-* [application & tips](./application&tips)
+- [neural network](./nn)
 
 
 
