@@ -1,4 +1,4 @@
-## perceptron
+# perceptron
 
 > 다수의 신호를 입력으로 받아 하나의 신호를 출력
 
@@ -8,11 +8,11 @@
 
 perceptron을 활용해 AND, NAND, OR gate까지는 만들었는데, XOR이 안만들어진다 ? 
 
--> Marvin Minsky 왈(1969년, 첫번째 침체기) : 다층 perceptron(neural net의 시작)으로 가능하다. 그런데 문제는 Weight와 bias학습을 못시킨다.
+-> Marvin Minsky 왈(1969년, 첫번째 침체기) : 다층 perceptron(neural net의 시작)으로 가능하다. 그런데 문제는 Weight와 bias학습을 못시킨다(구하지 못한다).
 
 -> Hinton왈 (1986년) : Backpropagation이면 가능하다 !
 
--> neural network가 deep해지면 Backpropagaton방법으론 앞단 쪽으로 갈 수록 에러가 전달이 잘 되지 않아 학습이 어려워진다(1995년, 두번째 침체기)
+-> neural network가 deep해지면 Backpropagaton방법으론 앞단 쪽으로 갈 수록 에러가 전달이 잘 되지 않아 학습이 어려워진다. **vanishing gradient**(1995년, 두번째 침체기)
 
 -> Hinton, Bengio (2006, 2007) : Weight를 초기화 잘한다면 가능해 !
 
@@ -22,7 +22,7 @@ labeled datasets이 너무 작다
 
 컴퓨터 성능이 너무 느리다
 
-잘못된 non-linearity방식을 사용했다
+잘못된 non-linearity방식을 사용했다(Sigmoid : X, ReLU : O)
 
 
 
