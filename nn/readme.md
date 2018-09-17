@@ -198,6 +198,10 @@ l2reg = 0.001 * tf.reduce_sum(tf.square(W))
 
 
 
+back propagation은 노드들의 loss값에 대한 가중치의 기울기를 구하는 과정이다. 그리고 이렇게 구해진 기울기를 adam과 같은 optimizer를 통해서 최적화 시켜주는 것
+
+
+
 ### SGD (stochastic gradient descent)
 
 SGD는 기울기가 하강하는 방향으로 이동하여 매개변수를 갱신하는 방법. 단순하고 구현하는 방법도 쉽지만, 비등방성(anisotropy) 함수(방향에 따라 기울기가 달라지는 함수)에서는 탐색 경로가 비효율적. 또한 어떤 함수에 대해서는 지그재그로 탐색하는 경우도 있음
