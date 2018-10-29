@@ -23,6 +23,15 @@ gradient = tf.reduce_mean((hypothesis - Y) * X)
 descent = W - learning_rate * gradient
 update = W.assign(descent)
 
+# # gradient를 변경하고 싶다면
+# # 아래 부분 동일하게 적어주고
+# cost = tf.reduce_sum(tf.square(hypothesis - Y))
+# optimizer = tf.train.GradintDescentOptimizer(learning_rate=0.1)
+# # gradient를 구해서 변경한 다음(여기선 변경하지 않았음)
+# gvs = optimizer.compute_gradients(cost, [W])
+# # 변경된 gvs를 gradient로 적용한다
+# apply_gradients = optimizer.apply_gradients(gvs)
+
 
 # 세션에 그래프를 launch시킨다
 sess = tf.Session()
