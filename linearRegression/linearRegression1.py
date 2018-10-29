@@ -28,6 +28,7 @@ sess.run(tf.global_variables_initializer())
 
 for step in range(2000):
     # 한번에 묶어서 계산한다. train은 값이 따로 없기에 비워둔다. train 찍으면 none 나옴
+    # train에 cost포함되고, cost에 W와 b가 모두 연결되어 있기 때문에 train만 sess.run하면 나머지도 자동 갱신된다
     cost_val, W_val, b_val, _  = sess.run([cost, W, b, train], feed_dict={X:[1, 2, 3], Y:[2.1, 3.1, 4.1]})
     if (step % 20 == 0):
         print("step : ", step, "cost : ", cost_val, "W : ", W_val, "b : ", b_val)
