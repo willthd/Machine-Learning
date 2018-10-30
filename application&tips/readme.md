@@ -56,15 +56,6 @@
 
 nomalization(정규화) : 데이터를 특정 범위로 변환하는 처리
 
-mini batch 입력 데이터를 평균 0, 분산 1인 데이터로 변환한다
-
-</br>
-
-* 장점
-  - 학습을 빨리 진행할 수 있다
-  - 초기값에 크게 의존하지 않는다(weight 초기값 선택에 크게 영향 안받을 수 있음)
-  - 오버피팅을 억제한다(drop out 필요성 감소)
-
 </br>
 
 * standardization
@@ -133,6 +124,14 @@ xy = MinMaxScaler().fit_transform(xy)
 
 ![l2](./l2.jpg)
 
+</br>
+
+```python
+l2reg = 0.001 * tf.reduce_sum(tf.square(W))
+```
+
+
+
 
 
 * L1 reg : 기존 cost function에 모든 weight의 절대값을 더한 식을 새로운 cost function으로 사용
@@ -165,9 +164,9 @@ xy = MinMaxScaler().fit_transform(xy)
 
   feature 개수 감소(machine learning에서)
 
-  normalization
+  batch normalization
 
-  regularization - regularization, drop out, esemble
+  regularization - regularization, drop out, esemble (nn에서 소개)
 
 
 
