@@ -232,6 +232,16 @@ optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
 
 
 
+</br>
+
+## 꿀팁 summary
+
+
+
+![13](./013.jpg)
+
+
+
 
 
 ## additional
