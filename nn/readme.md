@@ -173,7 +173,9 @@ Restricted Boatman Machine, weight의 초기값을 잘 주는 방법으로 Deep 
 
 #### regularization(가중치 감소 방법)
 
-weight 벡터의 제곱의 합을 regurlarization strength만큼 곱해 더하는 방법이다. regurlaization을 적용하지 않는다면 regurlarization strength 값을 작게 하고, 중요하게 생각한다면 크게 한다
+> 가중치가 클 수록 패널티를 적용해 가중치를 감소(weight decay)시키는 방법으로 overfitting을 줄이는 효과 있다
+
+weight 벡터의 제곱의 합을 regurlarization strength만큼 곱해 더하는 방법(l2reg)이다. regurlaization을 적용하지 않는다면 regurlarization strength 값을 작게 하고, 중요하게 생각한다면 크게 한다
 
 
 
@@ -193,11 +195,11 @@ l2reg = 0.001 * tf.reduce_sum(tf.square(W))
 
 #### Drop out
 
-> 이는 훈련층에서 기존의 몇 개의 노드를 임의로 없애버리고 training하겠다는 것. training할 때마다 임의로 선정한 몇 개의 노드를 무시한채로 training하고, 마지막 평가할 때는 모든 노드를 포함한다(훈련 때 삭제한 비율을 )
+> 이는 훈련층에서 기존의 몇 개의 노드를 임의로 없애버리고 training하겠다는 것. training할 때마다 임의로 선정한 몇 개의 노드를 무시한채로 training(학습시)하고, 마지막 평가(실전 test용)할 때는 모든 노드를 포함한다(훈련 때 삭제한 비율을)
 
 
 
-모델이 깊어지는 경우 overfitting일어나기도 한다. 이 때, overfitting을 막기 위해선 regularization을 하는데, 신경망 모델이 복잡해지면 가중치 감소만으로는 대응하기 어려운 경우가 있다. 이럴 때 흔히 drop out이라는 방법을 사용한다
+모델이 깊어지는 경우 overfitting일어나기도 한다. 이 때, overfitting을 막기 위해선 regularization을 하는데, 신경망 모델이 복잡해지면 가중치 감소만으로는 대응하기 어려운 경우가 있다. 이럴 때 흔히 drop out이라는 방법을 사용한다. 여러 개의 모델이 있는 neual network에서 적용되는 방법이다.
 
 
 

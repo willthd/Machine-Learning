@@ -156,6 +156,8 @@ l2reg = 0.001 * tf.reduce_sum(tf.square(W))
 
   feature개수가 많을 때(machine learning에서)
 
+  layer가 많을 때
+
   </br>
 
 - 해결 방법
@@ -166,7 +168,7 @@ l2reg = 0.001 * tf.reduce_sum(tf.square(W))
 
   batch normalization
 
-  regularization - regularization, drop out, esemble (nn에서 소개)
+  regularization - regularization, drop out(nn에서만), esemble
 
 
 
