@@ -4,7 +4,7 @@
 
 
 
-
+</br>
 
 ## fc VS cnn
 
@@ -20,7 +20,7 @@ fc와 다르게 3차원 데이터같이 입체적인 데이터가 흐른다(?)
 
 
 
-
+</br>
 
 ## cnn
 
@@ -34,7 +34,7 @@ fc와 다르게 3차원 데이터같이 입체적인 데이터가 흐른다(?)
 
 32는 image의 사이즈를 의미하고, 3은 색상(RGB)정보를 의미한다(3차원 형상)
 
-
+</br>
 
 ### 합성곱 연산(filter 연산)
 
@@ -49,6 +49,8 @@ filter의 매개변수가 fc에서의 weight(가중치)에 해당한다.
 
 
 
+
+</br>
 
 ### padding
 
@@ -72,11 +74,13 @@ filter의 매개변수가 fc에서의 weight(가중치)에 해당한다.
 
 
 
-주로 출력 크기를 조정할 목적으로 사용한다. 심층 신경망에서는 합성곱 연산을 몇 번씩 되풀이 하기 때문에 연산을 거칠 때마다 크기가 작아지면 더이상 연산을 적용할 수 없게 되기 때문
+**padding의 목적**
 
-모서리 부분을 network가 확인할 수 있게함
+* 주로 출력 크기를 조정할 목적으로 사용한다. 심층 신경망에서는 합성곱 연산을 몇 번씩 되풀이 하기 때문에 연산을 거칠 때마다 크기가 작아지면 더이상 연산을 적용할 수 없게 되고 뿐만 아니라 정보를 잃게 된다.
 
+* 모서리 부분을 network가 확인할 수 있게함
 
+</br>
 
 ### stride
 
@@ -112,7 +116,7 @@ OH, OW는 정수로 나와야 한다. (반올림 하는 경우도 있음)
 
 
 
-
+</br>
 
 
 
@@ -128,6 +132,10 @@ OH, OW는 정수로 나와야 한다. (반올림 하는 경우도 있음)
 
 
 
+</br>
+
+
+
 ![aa](./aa.PNG)
 
 
@@ -135,6 +143,8 @@ OH, OW는 정수로 나와야 한다. (반올림 하는 경우도 있음)
 블록(Channel, Height, Weight) 관점에서 입력 데이터가 필터를 거친 후 한 장의 activation map(특정 특징이 잘 나타난 이미지)이 되었다. 다른 말로 하면 channel이 1개인 activation map. 그럼 다수의 channel을 ouput으로 하기 위해선?
 
 -> 다수의 filter를 사용한다
+
+</br>
 
 
 
@@ -148,6 +158,8 @@ OH, OW는 정수로 나와야 한다. (반올림 하는 경우도 있음)
 
 이후에 출력 데이터와 편향(FN, 1, 1)을 더하는데, 서로 다른 형상을 더할 때 numpy의 broadcast 기능을 사용한다
 
+</br>
+
 
 
 
@@ -158,11 +170,11 @@ OH, OW는 정수로 나와야 한다. (반올림 하는 경우도 있음)
 
 
 
-위 그림은 입력 데이터를 한 덩어리로 묶어 **batch 처리**한 것. 선두에 배치용 차원을 추가했다. 여기서 주의할 점으로는 신경망에 4차원 데이터가 하나 흐르 때마다 데이터 N개에 대한 합성곱 연산이 이뤄진다는 것이다. 즉, N회분의 처리를 한번에 수행하는 것이다
+위 그림은 입력 데이터를 한 덩어리로 묶어 **batch 처리**한 것. 선두에 배치용 차원을 추가했다. 여기서 주의할 점으로는 신경망에 4차원 데이터가 하나 흐를 때마다 데이터 N개에 대한 합성곱 연산이 이뤄진다는 것이다. 즉, N회분의 처리를 한번에 수행하는 것이다
 
 
 
-
+</br>
 
 #### example
 
@@ -178,23 +190,27 @@ OH, OW는 정수로 나와야 한다. (반올림 하는 경우도 있음)
 
 
 
-
-
-
-
-
+</br>
 
 ## pooling
 
->  추출된 Activation map을 인위로 줄이는 작업, sub sampling
+>  추출된 Activation map을 하나의 layer씩 추출하여 인위로 줄이는 작업, sub sampling
 
-pooling의 window 크기와 stride는 같은 값으로 설정하는 것이 보통
+</br>
 
-풀링 레이어가 하는 일은 네트워크의 파라미터의 개수나 연산량을 줄이기 위해 representation의 spatial한 사이즈를 줄이는 것이다. 이는 작은 데이터셋에 한해서 오버피팅을 방지하는 효과도 가지고 있다
-
-Striving for Simplicity : The All Convolutional Net 이라는 논문에서는 pooling을 하지 않고 convolutional layer만 이용하는 방법이 제안되고 있으며, 최근 추세는 pooling을 사용하지 않는 쪽으로 발전하고 있다고 언급되어 있다
+* pooling의 window 크기와 stride는 같은 값으로 설정하는 것이 보통
 
 
+
+* 풀링 레이어가 하는 일은 네트워크의 파라미터의 개수나 연산량을 줄이기 위해 representation의 spatial한 사이즈를 줄이는 것이다. 이는 작은 데이터셋에 한해서 오버피팅을 방지하는 효과도 가지고 있다
+
+
+
+* Striving for Simplicity : The All Convolutional Net 이라는 논문에서는 pooling을 하지 않고 convolutional layer만 이용하는 방법이 제안되고 있으며, 최근 추세는 pooling을 사용하지 않는 쪽으로 발전하고 있다고 언급되어 있다
+
+
+
+</br>
 
 
 
@@ -202,7 +218,7 @@ Striving for Simplicity : The All Convolutional Net 이라는 논문에서는 po
 
 
 
-
+</br>
 
 max pooling(영역에서 가장 큰 원소 하나를 꺼내는 것)이 자주 쓰인다
 
@@ -220,7 +236,7 @@ max pooling(영역에서 가장 큰 원소 하나를 꺼내는 것)이 자주 �
 
 conv, relu, pool의 순서 및 횟수는 특별히 정해진 것 없다
 
-
+</br>
 
 ### pooling의 특징
 
@@ -238,13 +254,21 @@ conv, relu, pool의 순서 및 횟수는 특별히 정해진 것 없다
 
 
 
+</br>
 
+### pooling layer 구현
+
+
+
+![ee](/Users/PJS/Desktop/github/deepLearning/cnn/ee.jpg)
+
+</br>
 
 ### conv layer 구현 - im2col로 데이터 구현하기
 
 im2col : image to column
 
-
+</br>
 
 ![cc](./cc.jpg)
 
@@ -260,17 +284,7 @@ im2col 함수 적용한 경우, batch size오 무관하게 원소 개수는 필�
 
 그런데 conv layer 사용하는 이유가 유의미한 공간 정보를 담기 위해서인데, 이렇게 im2col을 사용해도 되면 그 정보가 조금은 소실되지 않을까?
 
-
-
-
-
-### pooling layer 구현
-
-
-
-![ee](./ee.jpg)
-
-
+</br>
 
 
 
@@ -294,7 +308,7 @@ convolutional layer를 여러 겹 쌓으면, 층이 깊어지면서 더 복잡�
 
 3단계 : (fully connected layer를 통한) classification
 
-
+</br>
 
 ## study case
 
