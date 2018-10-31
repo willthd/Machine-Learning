@@ -78,7 +78,7 @@ the same function and the same set of parameters are used at every time step
 
 ###다양한 구조로 쓰인다
 
-
+</br>
 
 ![09](./09.jpg)
 
@@ -104,7 +104,7 @@ the same function and the same set of parameters are used at every time step
 
 * many to many : ex) video classification on frame level
 
-
+</br>
 
 
 

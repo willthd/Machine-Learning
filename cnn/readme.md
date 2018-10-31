@@ -260,7 +260,7 @@ conv, relu, pool의 순서 및 횟수는 특별히 정해진 것 없다
 
 
 
-![ee](/Users/PJS/Desktop/github/deepLearning/cnn/ee.jpg)
+![ee](./ee.jpg)
 
 </br>
 
