@@ -167,7 +167,7 @@ Restricted Boatman Machine, weight의 초기값을 잘 주는 방법으로 Deep 
 
 위의 2개는 hinton의 문제점을 극복한 것이고, 이외 몇 가지 방법을 더 소개하자면
 
-###3. Overfitting 줄이자 ! Regularization
+### 3. Overfitting 줄이자 ! Regularization
 
 </br>
 
@@ -251,7 +251,7 @@ l2reg = 0.001 * tf.reduce_sum(tf.square(W))
 
 </br>
 
-###4. optimizer 선택
+### 4. optimizer 선택
 
 optimizer마다 장단점이 있기 때문에 모델 마다 다른 optimizer를 사용한다. 대개 SGD와 adam을 많이 사용한다
 

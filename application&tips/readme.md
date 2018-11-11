@@ -246,7 +246,7 @@ online learning이란 기존의 data로 학습된 model에 새로운 data를 추
 
 ## epoch, batch
 
-![cim](/Users/PJS/Desktop/github/deepLearning/application&tips/c.jpg)
+![cim](./c.jpg)
 
 </br>
 
