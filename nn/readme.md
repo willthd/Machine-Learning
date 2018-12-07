@@ -341,7 +341,7 @@ neural network에서는 activation function으로 비선형 함수를 사용한�
 
 **sigmoid의 문제점**
 
-* 항등 함수(출력층, 주로 regression에서)
+* 항등 함수(출력층, 주로 logistic regression에서)
 
   입력을 그대로 출력
 
