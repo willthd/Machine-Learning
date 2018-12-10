@@ -309,7 +309,9 @@ optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
 
 ### 비선형 함수
 
-neural network에서는 activation function으로 비선형 함수를 사용한다. 이유는 선형 함수(y=ax + b)를 사용할 경우 그것은 hidden layer가 없는 구조로도 충분히 만들 수 있기 때문이다. 그럼 층을 쌓는 neural network를 사용할 이유가 없음
+neural network에서는 activation function으로 비선형 함수를 사용한다. 이유는 선형 함수(y=ax + b)를 사용할 경우 그것은 hidden layer가 없는 구조로도 충분히 만들 수 있기 때문이다. 그럼 층을 쌓는 neural network를 사용할 이유가 없음.
+
+선형함수인 h(x)=cx를 활성화함수로 사용한 3층 네트워크로 나타내면 y(x)=h(h(h(x)))가 된다. 이는 실은 y(x)=ax와 똑같은 식이다. 즉, 은닉층이 없는 네트워크로 표현할 수 있다. 따라서 뉴럴네트워크에서 층을 쌓는 혜택을 얻고 싶다면 활성화함수로는 반드시 비선형 함수를 사용해야 한다.
 
 </br>
 
