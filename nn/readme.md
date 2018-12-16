@@ -150,8 +150,14 @@ Restricted Boatman Machine, weight의 초기값을 잘 주는 방법으로 Deep 
 > 각 층의 활성화값 분포가 적당히 퍼져야 학습이 원할하게 수행되는데, 이를 '강제'하는 방법
 >
 > mini batch 입력 데이터를 평균 0, 분산 1인 데이터로 변환한다
+>
+> 활성화 함수 전에 적용
 
+</br>
 
+```python
+bn1 = tf.layers.batch_normalization(pool1, training=is_train)
+```
 
 </br>
 
