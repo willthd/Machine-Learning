@@ -166,6 +166,7 @@ bn1 = tf.layers.batch_normalization(pool1, training=is_train)
 - 학습을 빨리 진행할 수 있다
 - 초기값에 크게 의존하지 않는다(weight 초기값 선택에 크게 영향 안받을 수 있음)
 - 오버피팅을 억제한다(drop out 필요성 감소)
+- gradient vanishing 문제 해결
 
 
 
