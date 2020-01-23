@@ -3,6 +3,6 @@
 </br>
 
 * [Machine Learning](./machineLearning)
-* [Deep Learning](./deep)
+* [Deep Learning](./deepLearning)
 * [Recommender System](./recommenderSystem)
 
