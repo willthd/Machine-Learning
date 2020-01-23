@@ -5,4 +5,3 @@
 * [Machine Learning](./machineLearning)
 * [Deep Learning](./deepLearning)
 * [Recommender System](./recommenderSystem)
-
