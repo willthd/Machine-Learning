@@ -3,5 +3,5 @@
 </br>
 
 * [Machine Learning](./machineLearning)
-* [Deep Learning](./deepLearning)
+* [Deep Learning](./deep)
 * [Recommender System](./recommenderSystem)
