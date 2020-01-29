@@ -843,7 +843,7 @@ print(iris_lda.shape)
 * PCA의 경우, 정방행렬(즉, 행과 열의 킉가 같은 행렬)만을 고유벡터로 분해할 수 있지만, SVD는 정방행렬뿐만 아니라 행과 열의 크기가 다른 행렬에도 적용할 수 있음
 * Null이 없는 행렬에만 적용할 수 있음
 * Truncated SVD는 대각원소 중에 상위 몇 개만 추출해서 여기에 대응하는 U와 V의 원소도 함께 제거해 더욱 차원을 줄인 형태로 분해하는 것을 의미. Truncated SVD로 분해된 행렬로 다시 복원할 경우 완벽하게 복원되지 않고, 근사적으로 복원됨. Truncated SVD는 scipy에서만 지원
-* scikit-learn의 PCA는 SVD 알고리즘으로 구현됐음. 하지만 PCA는 밀집 행렬(Dense Matrix)에 대한 변환만 가능하며, SVD는 희소 행렬(Sparse Matrix)에 대한 변환도 가능
+* scikit-learn의 PCA는 SVD 알고리즘으로 구현됐음(근데 null아니어도 된다고?). 하지만 PCA는 밀집 행렬(Dense Matrix)에 대한 변환만 가능하며, SVD는 희소 행렬(Sparse Matrix)에 대한 변환도 가능
 
 </br>
 
