@@ -484,10 +484,10 @@ eval_metric : 검증에 사용되는 함수. 기본값은 회귀인 경우 rmse,
 
 * rmse : root mean square error
 * mae : mean absolute error
-* logloss : negative log-likelyhood
+* logloss : negative log-likelyhood(보통 이진 분류에서 사용되는 cost function)
 * error : binary classification error rate(0.5 threshold)
 * merror : multicast classifiaction error rate
-* mlogloss : multiclass logloss
+* mlogloss : multiclass logloss(보통 멀티 클래스 분류에서 사용되는 cost function)
 * auc : area under the curve
 
 </br>
