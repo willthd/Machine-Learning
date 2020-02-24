@@ -1560,7 +1560,7 @@ print("macro 평균 f1 점수: {:.3f}".format(f1_score(y_test, pred, average="we
 
 ### 회귀의 평가 지표
 
-가끔 평균 제곱 에러나 평균 절댓값 에러를 사용해 모델을 튜닝할 때 이런 지표를 기반으로 결정할 수 있다. 그러나 일반적으로 R squre(결정계수)를 사용하는 것이 더 나은 지표이다
+가끔 평균 제곱 에러나 평균 절댓값 에러를 사용해 모델을 튜닝할 때 이런 지표를 기반으로 결정할 수 있다. 그러나 일반적으로 R squred(결정계수)를 사용하는 것이 더 나은 지표이다
 
 R squared(결정 계수) : 시그마((기대값 - 평균값)^2)/시그마((실제값 - 평균값)^2)
 
@@ -1603,14 +1603,15 @@ print("최적의 매개변수: {}".format(grid.best_params_))
 
 ## 파이프라인 인터페이스
 
-파이프라인에 들어갈 마지막 단계를 제외하고는 모두 transform메서드를 가지고 있어야 한다(마지막 단계가 예측하는 경우. 그렇지 않은 경우에는 전부 스케일 변환이나 PCA만 포함해 transform메서드를 가지고 있는 파이프라인을 만들 수 있다. 다만 마지막 단계에는 최소한 럇 메서드는 있어야 한다)
+파이프라인에 들어갈 마지막 단계를 제외하고는 모두 transform메서드를 가지고 있어야 한다(마지막 단계가 예측하는 경우. 그렇지 않은 경우에는 전부 스케일 변환이나 PCA만 포함해 transform메서드를 가지고 있는 파이프라인을 만들 수 있다. 다만 마지막 단계에는 최소한 fit 메서드는 있어야 한다)
 
 ### make_pipeline을 사용한 파이프라인 생성
 
-아래의 두 과정을 똑같은 작업을 수행하지만 간소화된 방법은 이름을 자동적으로 만들어주며 단계의 이름은 파이썬 클래스 이름의 소문자 버전이다. 같은 파이썬 클래스를 여러 단계에서 사용할 경우 이름 뒤에 숫자가 추가로 붙는다
+아래의 두 과정은 똑같은 작업을 수행하지만 간소화된 방법은 이름을 자동적으로 만들어주며 단계의 이름은 파이썬 클래스 이름의 소문자 버전이다. 같은 파이썬 클래스를 여러 단계에서 사용할 경우 이름 뒤에 숫자가 추가로 붙는다
 
 ```python
 from sklearn.pipeline import make_pipeline
+
 # 표준적인 방법
 pipe_long = Pipeline([("scaler", MinMaxScaler()), ("svm", SVC(C=100))])
 # 간소화된 방법
@@ -1655,7 +1656,6 @@ param_grid = [
 ```
 
 ```python
-
 X_train, X_test, y_train, y_test = train_test_split(
     cancer.data, cancer.target, random_state=0)
 
@@ -1717,7 +1717,7 @@ nltk.corpus.stopwords.words('english')
 
 </br>
 
-**Stemmming과 Lemmatization**
+**Stemming과 Lemmatization**
 
 어근 추출. Lemmatization이 보다 정교하며 변환에 더 오랜 시간 소요
 
@@ -1779,9 +1779,9 @@ sklearn의 count기반 벡터화 클래스. fit()과 transform()으로 활용
 
 </br>
 
-#### 2. TifidfVectorizer
+#### 2. TfidfVectorizer
 
-sklearn의 tfidf기반 벡터화 클래스. fit()과 transform()으로 활용하며, parameter 구성은 CountVectorizer와 동일
+sklearn의 tf-idf기반 벡터화 클래스. fit()과 transform()으로 활용하며, parameter 구성은 CountVectorizer와 동일
 
 </br>
 
@@ -1800,7 +1800,7 @@ from scipy import sparse
 
 ## 텍스트 분류(Text Classification)
 
-> 문서가 특정 분류 똫는 카테고리에 속하는 것을 예측하는 기법을 통칭한다. 예를 들어 특정 신문 기사 내용이 연애/정치/사회/문화 중 어떤 카테고리에 속하는지 자동으로 분류하거나 스팸 메일 검출 같은 프로그램이 이에 속하며, 지도 학습을 적용한다
+> 문서가 특정 분류 또는 카테고리에 속하는 것을 예측하는 기법을 통칭한다. 예를 들어 특정 신문 기사 내용이 연애/정치/사회/문화 중 어떤 카테고리에 속하는지 자동으로 분류하거나 스팸 메일 검출 같은 프로그램이 이에 속하며, 지도 학습을 적용한다
 
 </br>
 
@@ -1826,10 +1826,6 @@ y = np.array(y_train['result'].values, dtype=dt)
 </br>
 
 </br>
-
-
-
-
 
 # Deep Learning(Keras)
 
