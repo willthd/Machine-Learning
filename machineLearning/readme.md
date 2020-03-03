@@ -1806,6 +1806,22 @@ from scipy import sparse
 
 ## 생존 분석 모델
 
+https://boxnwhis.kr/2015/04/24/drawing_survival_curves_with_predictors.html
+
+**위험률 함수(Hazard function)**
+
+hazard란 위험률을 의미하는데, 어느 시점에 유저가 이탈할 가능성이 높은지 평가하는 비율이다. 위험률 함수는 아래와 같이 정의한다.
+
+![hazard_function](./hazard_function.png)
+
+위의 수식을 직관적으로 이해하면 ‘특정 시점 tt에서의 순간 위험률’이다.
+
+P(t≤T<t+Δt|T≥t)P(t≤T<t+Δt|T≥t)은 t시점까지 살아 남은 유저(T≥tT≥t)가 다음 ΔtΔt 시간 안에 죽을(t≤T<t+Δtt≤T<t+Δt) 확률을 의미한다. ‘tt시점까지 살아남은 유저’라는 조건 하에서 확률을 계산하므로 조건부 확률이다. 이 확률 값을 시간 ΔtΔt로 나누면 ‘단위 시간 당 죽을 가능성’이 된다. ΔtΔt가 1보다 작은 경우도 있으므로, 이 숫자는 더 이상 확률이 아니라 비율이 된다. 즉, 1보다 큰 수를 가질 수 있다.
+
+![hazard_function_2](./hazard_function_2.png)
+
+이 비율 함수에 Δt→0Δt→0의 극한 개념을 적용하면, 특정 시점 tt에서의 **순간(instantaneous)** 위험률 함수를 도출할 수 있다. 이것이 hazard function, h(t)h(t)다.
+
 https://hyperconnect.github.io/2019/08/22/survival-analysis-part2.html
 
 https://github.com/sebp/scikit-survival/blob/master/examples/survival-svm.ipynb
