@@ -1141,7 +1141,7 @@ skf = StratifiedKFold()
 scores = corss_val_score(logreg, iris.data, iris.target, cv=skf)
 ```
 
-sklearn 내에 RepeatedKFold(회귀), REpeatedStratifiedKFold(분류) 있음. KFold를 교차 검증을 여러 번 적용하되 K개의 분할로 나누기 전에 매번 데이터를 무작위로 섞는 방법
+sklearn 내에 RepeatedKFold(회귀), RepeatedStratifiedKFold(분류) 있음. KFold를 교차 검증을 여러 번 적용하되 K개의 분할로 나누기 전에 매번 데이터를 무작위로 섞는 방법
 
 </br>
 
