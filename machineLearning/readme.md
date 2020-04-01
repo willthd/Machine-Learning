@@ -1816,7 +1816,7 @@ hazard란 위험률을 의미하는데, 어느 시점에 유저가 이탈할 가
 
 ![hazard_function](./hazard_function.png)
 
-위의 수식을 직관적으로 이해하면 ‘특정 시점 tt에서의 순간 위험률’이다.
+위의 수식을 직관적으로 이해하면 ‘특정 시점 t에서의 순간 위험률’이다.
 
 P(t≤T<t+Δt|T≥t)은 t시점까지 살아 남은 유저(T≥t)가 다음 Δt 시간 안에 죽을(t≤T<t+Δt) 확률을 의미한다. ‘t시점까지 살아남은 유저’라는 조건 하에서 확률을 계산하므로 조건부 확률이다. 이 확률 값을 시간 Δt로 나누면 ‘단위 시간 당 죽을 가능성’이 된다. Δt가 1보다 작은 경우도 있으므로, 이 숫자는 더 이상 확률이 아니라 비율이 된다. 즉, 1보다 큰 수를 가질 수 있다.
 
@@ -1840,3 +1840,13 @@ https://stackoverflow.com/questions/25247190/numpy-void-type-how-to-use-it
 dt = np.dtype([('event', np.bool), ('time', np.float64)])
 y = np.array(y_train['result'].values, dtype=dt)
 ```
+
+
+
+### C-index
+
+모든 test 샘플의 실제 생존시간 combination 조합과 예측 생존시간 combination 조합을 만들어 두 샘플간 실제 생존 시간 간 대소 비교와 예측 생존시간 간 대소 비교를 함. 
+
+실제 생존 시간 간 대소비교 부등호와 예측 시간 간 대소비교 부등호가 동일할 경우 concordant라고 하며 부등호가 일치하지 않을 경우 disconcordant 하다고 함.
+
+**c-index**는 concordant 한 combination pair 수/ (concordant 한 combination pair 수 + disconcordant 한 combination pair 수)
