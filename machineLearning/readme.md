@@ -319,7 +319,7 @@ n_estimators : 생성할 tree의 개수. 이 값이 크면 tree들은 서로 매
 
 n_jobs : 사용할 core 개수(-1 모든 core, default값은 1)
 
-max_features : feature 개수 제한. 작을 수록 overfitting 줄어든다. 기본값을 사용하는 것이 좋다(regressiong의 경우 max_features = n_features, classification의 경우 max_features = sqrt(n_features). decision tree나 gradient boosting tree의 경우 기본값 "None")
+max_features : feature 개수 제한. 작을 수록 overfitting 줄어든다. 기본값을 사용하는 것이 좋다(regression의 경우 max_features = n_features, classification의 경우 max_features = sqrt(n_features). decision tree나 gradient boosting tree의 경우 기본값 "None")
 
 * hyperparameter tuning
 
