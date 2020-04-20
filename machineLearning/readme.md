@@ -798,9 +798,9 @@ print(pca.explained_variance_ratio)
 
 </br>
 
-## LDA(Linear Discriminant Analysis)
+## LDA(Linear Discriminant Analysis, 선형판별분석)
 
-> 분류 모델에서 사용하기 쉽도록 개별 클래스 분리를 최대화하는 클래스 간 분산은 최대화하고, 클래스 내부 분산은 최소화하는 축을 찾는 방식
+> 입력 데이터의 결정 값 클래스를 최대한으로 분리할 수 있는 축을 찾는다. 분류 모델에서 사용하기 쉽도록 개별 클래스 분리를 최대화하는 축을 찾기 위해 클래스 간 분산은 최대화하고, 클래스 내부 분산은 최소화하는 방식
 
 </br>
 
