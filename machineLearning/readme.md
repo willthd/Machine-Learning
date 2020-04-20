@@ -707,7 +707,7 @@ https://machinelearningmastery.com/display-deep-learning-model-training-history-
 feature 선택과 feature 추출로 나눌 수 있다.
 
 * feature 선택 : 특정 feature에 종속성이 강한 불필요한 feature는 아예 제거하고, 데이터의 특징을 잘 나타내는 주요 feature만 선택
-* feature 추출 : 기존 feature를 저차원의 중요 feature로 압축해서 추출하는 것. 이렇게 새롭게 추출된 중요 feature는 기존의 feature가 압축된 것이므로 기존의 feature와는 완전히 다른 값이 됨(데이터를 잘 설명할 수 있는 잠재적인 요소(Latent Factor)를 추출하는 것이 목표)
+* feature 추출 : 기존 feature를 저차원의 중요 feature로 압축해서 추출하는 것. 이렇게 새롭게 추출된 중요 feature는 기존의 feature가 압축된 것이므로 기존의 feature와는 완전히 다른 값이 됨(데이터를 잘 설명할 수 있는 **잠재적인 요소**(Latent Factor)를 추출하는 것이 목표)
 
 </br>
 
@@ -747,6 +747,8 @@ feature 선택과 feature 추출로 나눌 수 있다.
    (공분산이 0이라면 두 변수간에는 아무런 선형 관계가 없다는 의미. 두 변수가 독립적이라면 공분산은 0이 되지만, 공분산이 0이라고 해서 두 변수 관계가 항상 독립적이라고 할 수는 없다)
 
 2. 공분산 행렬의 고유벡터와 고유값을 계산
+
+   (고유값과 고유벡터 : https://darkpgmr.tistory.com/105)
 
 3. 고유값이 가장 큰 순으로 K개(PCA 변환 차수)만큼 고유벡터를 추출
 
