@@ -1,6 +1,6 @@
 # back propagation(by chain rule)
 
-> 예측값과 실제값의 차이(cost, error)를 통해 뒤에서 부터 앞으로 추적하여 조정해야 되는 값(weight, bias)의 기울기(node의 미분)를 계산하겠다(수치 미분법으로 기울기를 계산하는 것은 복잡하다. 따라서 back propagation을 사용하고, parameter의 기울기 값이 올바른지 확인하기 위해 수치 미분법으로 구한 기울기를 비교하는데 사용한다. gradient check)
+> 예측값과 실제값의 차이(cost, error)를 통해 뒤에서 부터 앞으로 추적하여 조정해야 되는 값(weight, bias)의 기울기(node의 미분)를 계산하겠다(수치 미분법으로 기울기를 계산하는 것은 시간이 오래 걸린다. 따라서 back propagation을 사용하고, parameter의 기울기 값이 올바른지 확인하기 위해 수치 미분법으로 구한 기울기를 비교하는데 사용한다. gradient check)
 
 </br>
 
