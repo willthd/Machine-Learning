@@ -51,7 +51,7 @@ input layer - hidden layer - ouput layer
 
 </br>
 
-nn의 학습 방식은 back propagation으로 이루어지는데, 이 때 gradient(변화량, 기울기)는 activation function을 거친 값과 곱해지는 경우가 많다(항상 그런 것은 아니다. + node로만 이루어진 경우는 vanishing gradient 안일어난다. 내 생각). 그런데 각 layer마다 activation function은 sigmoid 함수로 존재하고, 이 함수는 0~1 사이의 값을 갖기 때문에 layer가 깊어 질 수록 gradient에 작은 값들이 곱해져 0에 가깝게 된다. 따라서 각각의 결과에 대한 weight 영향력(df/dw)은 소실 되어 제대로 갱신이 되지 않게 되고, nn은 학습이 잘 이루어지지 않는다
+nn의 학습 방식(weight의 갱신 방식)은 back propagation으로 이루어지는데, 이 때 gradient(변화량, 기울기)값이 점차 줄어들어 학습을 방해하는 현상을 의미한다. back propagation식에서 cost function의 gradient 항이 존재하는데, 이 값이 0에 가까워지는 것이다. 이는 활성화 함수를 sigmoid나 tanh를 사용할 경우 도함수의 결과 값이 각각 0~0.25, 0~1이기 때문에 신경망이 깊어질 수록 weight의 영향력이 소실되어 제대로 갱신되지 않고, 학습이 어려워진다. 이를 막기위해 Relu, Leaky Relu, Maxout, Elu 등의 활성화 함수를 사용한다.
 
 ![00](./000.jpg)
 
