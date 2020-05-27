@@ -1,6 +1,4 @@
-# Interview
-
-> 머신러닝 주요 개념
+# 머신러닝 주요 개념
 
 </br>
 
@@ -16,7 +14,7 @@
 
 **매개변수 갱신 식**
 
-![sgd](/Users/bagjongsu/Desktop/github/Machine-Learning/interview/sgd.png)
+![sgd](./sgd.png)
 
 </br>
 
@@ -36,7 +34,7 @@
 
 ### 평가 지표 종류
 
-결정 계수(R^2)
+**결정 계수(R^2)**
 
 ![r^2](./r.png)
 
