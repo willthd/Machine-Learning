@@ -134,7 +134,9 @@ train data의 개수가 20,000개. batch_size가 500이라고 가정하면 1epoc
 
 ### Gradient Vainishing
 
-nn의 학습 방식(weight의 갱신 방식)은 backpropagation으로 이루어지는데, 이 때 gradient(변화량, 기울기)값이 점차 줄어들어 학습을 방해하는 현상을 의미한다. backpropagation식에서 cost function의 gradient 항(activation 함수의 미분 값)이 존재하는데, 이 값이 0에 가까워지는 것이다. 이는 활성화 함수를 sigmoid나 tanh를 사용할 경우 도함수의 결과 값이 각각 0~0.25, 0~1이기 때문에 신경망이 깊어질 수록 weight의 영향력이 소실되어 제대로 갱신되지 않고, 학습이 어려워진다. 이를 막기위해 Relu, Leaky Relu, Maxout, Elu 등의 활성화 함수를 사용한다. 더 좋은 해결책은 LSTM, GRU를 사용하는 것이다. 이유는 **이해안되니 나중에 다시 공부하자.**
+nn의 학습 방식(weight의 갱신 방식)은 backpropagation으로 이루어지는데, 이 때 gradient(변화량, 기울기)값이 점차 줄어들어 학습을 방해하는 현상을 의미한다. backpropagation식에서 cost function의 gradient 항(activation 함수의 미분 값)이 존재하는데, 이 값이 0에 가까워지는 것이다. 이는 활성화 함수를 sigmoid나 tanh를 사용할 경우 도함수의 결과 값이 각각 0~0.25, 0~1이기 때문에 신경망이 깊어질 수록 weight의 영향력이 소실되어 제대로 갱신되지 않고, 학습이 어려워진다. 이를 막기위해 Relu, Leaky Relu, Maxout, Elu 등의 활성화 함수를 사용한다. Relu의 경우 도함수가 0 또는 1더 좋은 해결책은 LSTM, GRU를 사용하는 것이다. 이유는 **이해안되니 나중에 다시 공부하자.**
+
+보통 DNN에서 cost function은 MSE 또는 cross entropy를 사용하는데, cross entropy의 경우 weight, bias 업데이트 식에서 gradient 항(activation 함수의 미분 값)이 없어지기 때문에 gradient vanishing 문제에서 좀 더 자유롭다(레이어가 한 개 일때는 완벽하게 없어짐. 즉, 최초의 레이어는 gradient항이 없음). 하지만 레이어가 여러 개이면 결국 gradient가 곱해지므로 완전히 자유로울 수는 없다.
 
 </br>
 
