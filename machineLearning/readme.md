@@ -726,7 +726,9 @@ feature 선택과 feature 추출로 나눌 수 있다.
 
 </br>
 
-![dr](./dimension_reduction.png)
+![dr](./dr.png)
+
+</br>
 
 ## PCA(Principal Component Analysis, 주성분 분석)
 
