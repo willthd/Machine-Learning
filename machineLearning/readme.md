@@ -696,6 +696,27 @@ https://machinelearningmastery.com/display-deep-learning-model-training-history-
 
 **StandardScaler()** : 각 feature의 평균을 0, 분산을 1로 변경해 모든 feature가 같은 크기를 가지게 한다
 
+```python
+from sklearn.preprocessing import StandardScaler
+data = [[0, 0], [0, 0], [1, 1], [1, 1]]
+scaler = StandardScaler()
+print(scaler.fit(data))
+StandardScaler()
+print(scaler.mean_)
+[0.5 0.5]
+# scaler.var_는 각 feature의 분산값 arr로 저장되어 있음
+print(scaler.transform(data))
+[[-1. -1.]
+ [-1. -1.]
+ [ 1.  1.]
+ [ 1.  1.]]
+print(scaler.transform([[2, 2]]))
+[[3. 3.]]
+
+# 다시 되돌리기
+inverse_transform(self, X[, copy])
+```
+
 **RobustScaler()** : StandardScaler()와 비슷하지만 평균을 중간값, 분산을 사분위 값을 사용한다. outlier에 영향을 받지 않게 한다
 
 **MinMaxScaler()** : 모든 feature가 정확하게 0과 1 사이에 위치하도록 데이터를 변경한다. X_test의 경우 X_train으로 fit된 scaler를 이용해 transform하기 때문에 0과 1 사이에 위치하지 않을 수 있다
@@ -726,7 +747,9 @@ feature 선택과 feature 추출로 나눌 수 있다.
 
 </br>
 
-![dr](./dimension_reduction.png)
+![dr](./dr.png)
+
+</br>
 
 ## PCA(Principal Component Analysis, 주성분 분석)
 
