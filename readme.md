@@ -5,5 +5,3 @@
 * [Machine Learning](./machineLearning)
 * [Deep Learning](./deep)
 * [Recommender System](./recommenderSystem)
-
-test
