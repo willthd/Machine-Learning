@@ -548,6 +548,8 @@ learning_rate(default=0.1) : 학습률. 너무 작으면 과적합 이슈와 학
 
 **reg_alpha**(default=0) : L1 regularization
 
+**lgbm과 xgboost의 parameter 정리** : [http://machinelearningkorea.com/2019/09/29/lightgbm-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0/](http://machinelearningkorea.com/2019/09/29/lightgbm-파라미터/)
+
 </br>
 
 ### Learning Task 파라미터
