@@ -243,7 +243,7 @@ https://wikidocs.net/61375
 
 </br>
 
-### 앙상블
+### Ensemble
 
 * Voting : 보통 서로 다른 유형의 모델 활용.
   * Soft : class 확률을 평균하여 결정(분류). 일반적으로 soft voting이 hard voting 보다 성능 좋아 자주 활용됨.
