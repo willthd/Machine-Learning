@@ -245,10 +245,12 @@ https://wikidocs.net/61375
 
 ### 앙상블
 
-* Voting
-* Bagging
-* Boosting
-* Stacking
+* Voting : 보통 서로 다른 유형의 모델 활용.
+  * Soft : class 확률을 평균하여 결정(분류). 일반적으로 soft voting이 hard voting 보다 성능 좋아 자주 활용됨.
+  * Hard : 모델 간 다수결로 최종 class 결정(분류)
+* Bagging : 모두 동일 유형의 모델이지만, 데이터 샘플링을 서로 다르게 가져감(Bootstrapping). 이 때, 데이터 중복 가능. 단일 모델은 Decision Tree 모델이 주로 활용됨. ex) Random Forest 
+* Boosting : 모두 동일 유형의 모델이지만, 앞에서 학습한 모델 예측의 에러가 높은 데이터에 대해 가중치를 부여해 다음 모델이 학습하는 방식. 과적합 가능성 높음. 단일 모델로는 Decision Tree 모델이 주로 활용됨.ex) XGboost, Catboost, LGBM
+* Stacking : 서로 다른 유형의 모델 활용해 얻은 결과 값을 다시 학습 데이터로 만들어서 또 다른 모델(meta model)로 재학습 시켜 최종 결과 예측.
 
 ### 최적화 종류
 
@@ -268,6 +270,8 @@ optimizer
 ### RF
 
 ### SVM
+
+### Decision Tree
 
 ### 추천 시스템
 
