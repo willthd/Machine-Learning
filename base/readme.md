@@ -220,7 +220,9 @@ Gradient Vanishing/Exploding 현상을 완화하기 위해 출력 값을 표준 
 
 4. Drop out : NN에서 기존의 몇 개의 노드를 무작위로 제외하고 훈련한다. 이 때 제외시킬 노드의 비율을 정할 수 있으며 보통 0.2 ~ 0.5 사이로 지정한다.  테스트 단계에서는 모든 노드를 포함한다. 핵심 아이디어는 층의 출력 값에 노이즈를 추가하여 중요하지 않은 우연한 패턴을 깨트리는 것이다
 
-5. Outlier를 없앤다 -> 특정 Outlier에 과적합 되는 모델을 피하기 위해 학습 시, 아예 outlier를 제외 시킴.
+5. Batch Normalization
+
+6. Outlier를 없앤다 -> 특정 Outlier에 과적합 되는 모델을 피하기 위해 학습 시, 아예 outlier를 제외 시킴.
 
 </br>
 
@@ -232,7 +234,7 @@ Gradient Vanishing/Exploding 현상을 완화하기 위해 출력 값을 표준 
 
 **Batch Normalization**
 
-각 층의 활성화값 분포가 적당히 퍼져야 학습이 원할하게 수행되는데, 이를 '강제'하는 방법으로 mini batch 입력 데이터를 평균 0, 분산 1인 데이터로 변환한다. 활성화 함수 전에 적용한다
+각 층의 활성화값 분포가 적당히 퍼져야 학습이 원할하게 수행되는데, 이를 '강제'하는 방법으로 mini batch 입력 데이터를 평균 0, 분산 1인 데이터로 변환한다. 여기서 입력 데이터는 활성화 함수 직전의 Wx를 의미한다. x는 동일 값이니, 결과적으로 W(weight)에 대한 정규화이며, 일반적인 data normalization과는 원리는 같지만 대상이 다르다는 차이가 있다. 활성화 함수 전에 적용한다.
 
 - 학습을 빨리 진행할 수 있다
 - 초기값에 크게 의존하지 않는다(weight 초기값 선택에 크게 영향 안받을 수 있음)
@@ -240,6 +242,8 @@ Gradient Vanishing/Exploding 현상을 완화하기 위해 출력 값을 표준 
 - gradient vanishing 문제 해결
 
 https://wikidocs.net/61375
+
+https://89douner.tistory.com/44
 
 </br>
 
