@@ -273,6 +273,8 @@ https://89douner.tistory.com/44
 
 ### RNN(LSTM, GRU)
 
+https://dgkim5360.tistory.com/entry/understanding-long-short-term-memory-lstm-kr
+
 ### Decision Tree
 
 ### SVM
