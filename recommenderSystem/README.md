@@ -2,11 +2,11 @@
 
 **종류**
 
-- Content based filtering : 콘텐트 기반 필터링
+- Content based filtering : 콘텐트 간의 유사도 활용(여기서 유사도는 보통 코사인 유사도를 의미)
 - Collaborative filtering : 협업 필터링(사용자가 평가한 다른 아이템을 기반으로 사용자가 평가하지 않은 아이템의 예측 평가를 도출하는 방식)
   - Nearest Neighbor : 최근접 이웃 협업 필터링(index 간의 유사도 확인)
-    - User-User : User가 Index, Item이 Feature
-    - Item-Item : Item이 Index, User가 Feature. 일반적으로 User-User보다 더 자주 사용됨. 
+    - User-User : User가 Index, Item이 Feature. 나와 비슷한 다른 사람들이 어떤 종목을 선택했는지 추천.
+    - Item-Item : Item이 Index, User가 Feature. 일반적으로 User-User보다 더 자주 사용됨. 해당 종목을 선택한 다른 고객들이 선택한 다른 종목 추천.
   - Latent Factor : 잠재 요인 협업 필터링
 
 
