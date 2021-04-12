@@ -62,18 +62,6 @@
 
 </br>
 
-**Precision, 정밀도(양성 예측도)**
-
-(TP) / (TP + FP)
-
-True라고 예측한 것 중 진짜 True는 얼마나 있는지
-
-거짓 양성의 수(FP)를 줄이는 것이 목표일 때 사용한다
-
-거짓 양성 없다 = 정밀도 1
-
-</br>
-
 **TPR(참 양성 비율), Recall(재현율), Sensitivity(민감도)**
 
 (TP) / (TP + FN)
@@ -88,11 +76,15 @@ True라고 예측한 것 중 진짜 True는 얼마나 있는지
 
 </br>
 
-**TNR, Specificity, 특이도**
+**Precision, 정밀도(양성 예측도)**
 
-(TN) / (TN + FP)
+(TP) / (TP + FP)
 
- = 1 - fall out
+True라고 예측한 것 중 진짜 True는 얼마나 있는지
+
+거짓 양성의 수(FP)를 줄이는 것이 목표일 때 사용한다
+
+거짓 양성 없다 = 정밀도 1
 
 </br>
 
@@ -101,6 +93,14 @@ True라고 예측한 것 중 진짜 True는 얼마나 있는지
 진짜 음성 중 양성이라고 잘못 예측한 경우의 비율(낮을 수록 좋다)
 
 (FP) / (FP + TN)
+
+</br>
+
+**TNR, Specificity, 특이도**
+
+(TN) / (TN + FP)
+
+ = 1 - fall out
 
 </br>
 
@@ -120,9 +120,9 @@ True라고 예측한 것 중 진짜 True는 얼마나 있는지
 
 </br>
 
-**AUC**
+**AUC**(AUROC)
 
-ROC 곡선의 아랫부분 면적을 계산한다(0 ~ 1). 불균형한 데이터셋에서는 정확도보다 AUC가 훨씬 좋은 지표이다. 우선 여러 모델을 비교해 AUC가 높은 모델을 찾고, 임계값을 조정한다
+ROC 곡선의 아랫부분 면적을 계산한다(0 ~ 1). 불균형한 데이터셋에서는 정확도보다 AUC가 훨씬 좋은 지표이다. 데이터의 각 sample에 예측 확률 값을 threshold로 정하고, True, False를 구분한다. 모든 sample마다 동일 작업을 반복하며 TPR, FPR을 구해 y가 TRP, x가 FPR인 좌표에 표기한다. 각 지점을 연결해 만들어진 곡선을 ROC곡선이라 하며, 이 때 면적은 AUC라고 한다.
 
 </br>
 
@@ -144,7 +144,7 @@ train data의 개수가 20,000개. batch_size가 500이라고 가정하면 1epoc
 
 ### Gradient Vainishing
 
-nn의 학습 방식(weight의 갱신 방식)은 backpropagation으로 이루어지는데, 이 때 gradient(변화량, 기울기)값이 점차 줄어들어 학습을 방해하는 현상을 의미한다. backpropagation식에서 cost function의 gradient 항(activation 함수의 미분 값)이 존재하는데, 이 값이 0에 가까워지는 것이다. 이는 활성화 함수를 sigmoid나 tanh를 사용할 경우 도함수의 결과 값이 각각 0~0.25, 0~1이기 때문에 신경망이 깊어질 수록 weight의 영향력이 소실되어 제대로 갱신되지 않고, 학습이 어려워진다. 이를 막기위해 Relu, Leaky Relu, Maxout, Elu 등의 활성화 함수를 사용한다. Relu의 경우 도함수가 0 또는 1더 좋은 해결책은 LSTM, GRU를 사용하는 것이다. 이유는 **이해안되니 나중에 다시 공부하자.**
+nn의 학습 방식(weight의 갱신 방식)은 backpropagation으로 이루어지는데, 이 때 gradient(변화량, 기울기)값이 점차 줄어들어 학습을 방해하는 현상을 의미한다. backpropagation식에서 cost function의 gradient 항(activation 함수의 미분 값)이 존재하는데, 이 값이 0에 가까워지는 것이다. 이는 활성화 함수를 sigmoid나 tanh를 사용할 경우 도함수의 결과 값이 각각 0 ~ 0.25, 0 ~ 1 이기 때문에 신경망이 깊어질 수록 weight의 영향력이 소실되어 제대로 갱신되지 않고, 학습이 어려워진다. 이를 막기위해 Relu, Leaky Relu, Maxout, Elu 등의 활성화 함수를 사용한다. Relu의 경우 도함수가 0 또는 1. 더 좋은 해결책은 LSTM, GRU를 사용하는 것이다. 이유는 **이해안되니 나중에 다시 공부하자.**
 
 보통 DNN에서 cost function은 MSE 또는 cross entropy를 사용하는데, cross entropy의 경우 weight, bias 업데이트 식에서 gradient 항(activation 함수의 미분 값)이 없어지기 때문에 gradient vanishing 문제에서 좀 더 자유롭다(레이어가 한 개 일때는 완벽하게 없어짐. 즉, 최초의 레이어는 gradient항이 없음). 하지만 레이어가 여러 개이면 결국 gradient가 곱해지므로 완전히 자유로울 수는 없다.
 
@@ -218,7 +218,7 @@ Gradient Vanishing/Exploding 현상을 완화하기 위해 출력 값을 표준 
 
    **위의 가중치 규제는 모두 테스트가 아닌 훈련시에만 추가된다**
 
-4. Drop out : NN에서 기존의 몇 개의 노드를 무작위로 제외하고 훈련한다. 이 때 제외시킬 노드의 비율을 정할 수 있으며 보통 0.2 ~ 0.5 사이로 지정한다.  테스트 단계에서는 모든 노드를 포함한다. 핵심 아이디어는 층의 출력 값에 노이즈를 추가하여 중요하지 않은 우연한 패턴을 깨트리는 것이다
+4. Drop out : NN에서 기존의 몇 개의 노드를 무작위로 제외하고 훈련한다. 이 때 제외시킬 노드의 비율을 정할 수 있으며 보통 0.2 ~ 0.5 사이로 지정한다.  **테스트 단계에서는 모든 노드를 포함한다.** 핵심 아이디어는 층의 출력 값에 노이즈를 추가하여 중요하지 않은 우연한 패턴을 깨트리는 것이다
 
 5. Batch Normalization
 
@@ -234,7 +234,7 @@ Gradient Vanishing/Exploding 현상을 완화하기 위해 출력 값을 표준 
 
 **Batch Normalization**
 
-각 층의 활성화값 분포가 적당히 퍼져야 학습이 원할하게 수행되는데, 이를 '강제'하는 방법으로 mini batch 입력 데이터를 평균 0, 분산 1인 데이터로 변환한다. 여기서 입력 데이터는 활성화 함수 직전의 Wx를 의미한다. x는 동일 값이니, 결과적으로 W(weight)에 대한 정규화이며, 일반적인 data normalization과는 원리는 같지만 대상이 다르다는 차이가 있다. 활성화 함수 전에 적용한다.
+각 층의 활성화값 분포가 적당히 퍼져야 학습이 원할하게 수행되는데, 이를 '강제'하는 방법으로 mini batch 입력 데이터를 평균 0, 분산 1인 데이터로 변환한다. 여기서 입력 데이터는 활성화 함수 직전의 Wx를 의미한다. x는 동일 값이니, 결과적으로 W(weight)에 대한 정규화이며, 일반적인 data normalization과는 원리는 같지만 대상이 다르다는 차이가 있다. **활성화 함수 전에 적용한다.**
 
 - 학습을 빨리 진행할 수 있다
 - 초기값에 크게 의존하지 않는다(weight 초기값 선택에 크게 영향 안받을 수 있음)
@@ -264,8 +264,15 @@ https://89douner.tistory.com/44
 
 ### 최적화(optimizer) 종류
 
-
 ### PCA - 차원 축소
+
+### Decision Tree
+
+### Baysiean 
+
+### 추천 시스템
+
+### AutoEncoder
 
 ### KNN
 
@@ -275,12 +282,4 @@ https://89douner.tistory.com/44
 
 https://dgkim5360.tistory.com/entry/understanding-long-short-term-memory-lstm-kr
 
-### Decision Tree
-
 ### SVM
-
-### Baysiean
-
-### 추천 시스템
-
-### AutoEncoder
