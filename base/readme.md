@@ -278,7 +278,13 @@ https://89douner.tistory.com/44
 
 ### CNN
 
-### RNN(LSTM, GRU)
+### LSTM
+
+RNN은 현재 노드와 먼 과거 상태를 사용할 때, 기울시 소실 문제가 발생해 학습이 잘 이루어지지 않음. 이를 해결하고자 과거 정보를 나중에 다시 주입하는 LSTM, GRU 모델 나타남.
+
+* forget gate : 버릴 정보 선택(sigmoid)
+* Input gate : 정보 저장 여부 결정(sigmoid)
+* output gate : 어떤 값을 출력할지 결정(tanh)
 
 https://dgkim5360.tistory.com/entry/understanding-long-short-term-memory-lstm-kr
 
