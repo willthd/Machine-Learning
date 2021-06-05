@@ -1,5 +1,7 @@
 # 추천 시스템
 
+> Generate candidates -> Apply constraint -> Ranking
+
 **종류**
 
 - Content based filtering : 콘텐트 간의 유사도 활용(여기서 유사도는 보통 코사인 유사도를 의미)
@@ -26,6 +28,20 @@
 행렬 분해에 의해 추출되는 ''잠재 요인''이 정확히 어떤 것인지는 알 수 없다.
 
 SVD는 Null이 없는 행렬에만 적용할 수 있기 때문에 확률적 경사 하강법(SGD)이나 ALS(Alternating Least Squares) 방식을 이용해 수행한다.
+
+</br>
+
+## 추천 시스템의 한계
+
+**Cold Start**
+새로운 또는 어떤 유저들에 대한 충분한 정보가 수집된 상태가 아니라서 해당 유저들에게 적절한 제품을 추천해주지 못하는 문제 => content based + collaborative 등의 조합으로 극복한다.
+
+트렌드 변화, 또는 사용자의 관심사 변화 등으로 과거의 학습된 모델이 새로운 변화를 반영하지 못하는 경우
+
+**Long**-**Tail Economy**
+수 많은 데이터 중, 대중의 관심을 받는 일부(약 10%)만 계속 추천되는 경우. 다양성 부족
+
+
 
 </br>
 
