@@ -39,9 +39,13 @@ SVD는 Null이 없는 행렬에만 적용할 수 있기 때문에 확률적 경�
 트렌드 변화, 또는 사용자의 관심사 변화 등으로 과거의 학습된 모델이 새로운 변화를 반영하지 못하는 경우
 
 **Long**-**Tail Economy**
-수 많은 데이터 중, 대중의 관심을 받는 일부(약 10%)만 계속 추천되는 경우. 다양성 부족
+수 많은 데이터 중, 대중의 관심을 받는 일부(약 10%)만 계속 추천되는 경우. 다양성 부족.
 
+</br>
 
+## 평가 지표
+
+추천 시스템은 regression 또는 ranking 문제로 분류되는데 regression의 경우 일반적으로 rmse 평가 지표를 사용하고, ranking 문제에선 일반적으로 ndcg(normalized discounted cumulative gain)사용한다.
 
 </br>
 
