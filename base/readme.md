@@ -260,7 +260,9 @@ https://89douner.tistory.com/44
 
 
 
+### noise한 적은 양의 data 처리
 
+데이터가 작을때 validation set을 따로 만들어두기 아까움. 딥러닝에서 Validation set은 결국 early stopping을 반영하기 위함인데, 이를 학습으로 가져가고 overfitting을 막기위해 적당한 epoch(100)을 설정. 대신 충분히 학습되기 위해선 learning_rate decay 적용. 이때 기준은 early stopping처럼 본인이 실험을 하면서 어느 시점에 반영할지 결정(처음엔 반영안한채로 학습하고 실험 결과 확인한 뒤에). 노이즈가 엄청 많지 않은 데이터의 경우 epoch을 늘려 성능 개선을 기대해볼 수 있는 경우가 있지만(cifar10), 100으로 충분히 해결되는 경우 많음. Optimizer는 SGD, loss는 MAE가 노이즈 막으며 학습하는데 적합하기도 함.
 
 ### 최적화(optimizer) 종류
 
