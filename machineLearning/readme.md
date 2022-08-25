@@ -1530,7 +1530,7 @@ plt.legend(loc="best")
 곡선은 오른쪽 위로 갈수록 더 좋은 분류기이다. 임계값이 높아지면서 정밀도는 높아지고, 재현율은 낮아진다
 
 AUROC와 마찬가지로 AUPRC(PRAUC) 존재함
-imbalanced 데이터에선 AUC보다 더 주요 지표로 사용
+imbalanced 데이터에선 AUROC보다 더 주요 지표로 사용
 
 ![prauc](././prauc.png)
 
